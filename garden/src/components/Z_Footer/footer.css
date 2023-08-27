@@ -1,0 +1,92 @@
+.footer{
+    width: 1440px;
+    height: 933px;
+    padding: 42px 32px 610px 29px;
+}
+.footerInfo{
+ width: 1375px;
+ height: 278px;
+ position: relative;
+}
+.contact{
+    position: absolute;
+    font-size: 42px;
+    font-weight: bolder;
+    top: 0;
+}
+.addres{
+    position: absolute;
+    right: 391px;
+    font-size: 42px;
+}
+.telephone{
+    position: absolute;
+    font-size: 72px;
+    font-weight: 900;
+    top: 78px;
+}
+.strasse{
+    position: absolute;
+    font-size: 41.5px;
+    font-weight: 700;
+    top: 76px;
+    right: 42px;
+    color: black;
+}
+.hours{
+    position: absolute;
+    font-size: 18px;
+    font-weight: 800;
+    bottom: 50px;
+    right: 421px;
+}
+.a_day{
+    position: absolute;
+    font-size: 25px;
+    font-weight: 900;
+    bottom: 17px;
+    right: 381px;
+}
+.whatsUpCont{
+    width: 100px;
+    height: 78px;
+    position: absolute;
+    bottom: 0;
+    left: 105px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: space-between;
+    text-decoration: none;
+    color: black;
+    
+}
+.whatsUpCont img{
+    cursor: pointer;
+}
+.instaCont{
+    width: 87px;
+    height: 78px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 800;
+    justify-content: space-between;
+    text-decoration: none;
+    color: black;
+}
+.instaCont img{
+    cursor: pointer;
+}
+.googleMap{
+    width: 1345px;
+    height: 525px;
+    margin-top: 40px;
+    background-image: url(../../../public/images/googleMap.png);
+}

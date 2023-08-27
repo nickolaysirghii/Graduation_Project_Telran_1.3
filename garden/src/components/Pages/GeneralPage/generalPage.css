@@ -1,0 +1,94 @@
+.tools{
+    width: 1440px;
+    min-height: 1100px;
+    position: relative;
+    border: 1px solid transparent;
+}
+.titleTools{
+    position: absolute;
+    top: 53px;
+    left: 30px;
+    font-weight: bold;
+    letter-spacing: 2.3px;
+    font-size: 40px;
+}
+.toolsForm{
+    width: 1440px;
+    height: 50px;
+    position: absolute;
+    top: 180px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+
+}
+.toolsForm button{
+    color: green;
+    height: 85%;
+    margin-left: 30px;
+    width: 100px;
+    font-weight: 600;
+    background-color:  #F1FFF1;
+    border: 2px solid green;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.toolPrice{
+    font-size: 22px;
+    font-weight: 700;
+
+}
+.from{
+    height: 94%;
+    width: 105px;
+    border-radius: 10px;
+    margin-left: 15px;
+    background-color: transparent;
+    padding-left: 8px;
+}
+.to{
+    height: 94%;
+    width: 105px;
+    border-radius: 10px;
+    margin-left: 13px;
+    background-color: transparent;
+    padding-left: 8px;
+}
+.toolContainer{
+    width: 1440px;
+    min-height: 860px;
+    margin-top: 240px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 35px;
+    padding-left: 39px;
+    padding-right: 33px;
+}
+.disItems{
+    margin-left: 37px;
+    font-size: 22px;
+    font-weight: 800;
+}
+.checkBox{
+    width: 50px;
+    height: 90%;
+    border-radius: 20px;
+    margin-left: 32px;
+
+}
+.sortedTools{
+    margin-left: 85px;
+    font-weight: 900;
+    font-size: 22px;
+}
+.sortedInput{
+    margin-left: 42px;
+    background-color: transparent;
+    width: 220px;
+    height: 94%;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    color: gray;
+}

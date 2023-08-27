@@ -1,0 +1,115 @@
+.every{
+    width: 300px;
+    height: 400px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.imageProduct{
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.amOf{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    position: absolute;
+    background-color: #FF32A1;
+    top: 0;
+    right: 0;
+    color: #F1FFF1;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+
+}
+.amOf2{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    position: absolute;
+    background-color: #FF32A1;
+    top: 0;
+    right: 0;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.priceProduct2{
+    font-size: 29px;
+    font-weight: 900;
+    margin-left: 14px;
+    margin-top: 6px;
+}
+.priceProduct2 span{
+font-size: 20px;
+margin-left: 5px;
+}
+.oldPrice2{
+    position: absolute;
+    left: 126px;
+    bottom: 40px;
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: line-through;
+    color: grey;
+
+}
+.percentOfDiscount{
+color: #FF32A1;
+position: absolute;
+right: 40px;
+font-size: 20px;
+font-weight: 900;
+bottom: 40px;
+}
+.productTitle{
+    font-size: 18px;
+    font-weight: 900;
+    position: absolute;
+    top: 374px;
+    left: 10px;
+}
+.NewButton{
+    height: 72px;
+    width: 280px;
+    position: absolute;
+    top: 208px;
+    left: 10px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #393;
+    border: 2px solid #393;
+    background: #F1FFF1;
+    cursor: pointer;
+    visibility: hidden;
+
+}
+.showNewButton {
+    height: 72px;
+    width: 280px;
+    position: absolute;
+    top: 208px;
+    left: 10px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #393;
+    border: 2px solid #393;
+    background: #F1FFF1;
+    cursor: pointer;
+}
+.every:hover .NewButton{
+   visibility: visible;
+}

@@ -1,0 +1,67 @@
+.header{
+    width: 1384px;
+    height: 72px;
+    margin: 19px 26px 30px 26px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    height: 100%;
+    width: 71px;
+    background-image: url(../../../public/images/Logo.png);
+    cursor: pointer;
+}
+.header button{
+    width: 127px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 5px;
+    margin-left: 57px;
+    background-color: #339933;
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+}
+.links{
+    width: 330px;
+    height: 20px;
+    margin-left: 592px;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 130%;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.links a{
+    text-decoration: none;
+}
+.products{
+    margin-left: 20px;
+}
+.bag{
+    position: absolute;
+    right: 0;
+    top: 21px;
+    cursor: pointer;
+}
+.cartAmount{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 20px;
+    top: 35px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    background-color: red;
+    color: #FFF;
+}
+.cartHidden{
+ visibility: hidden;
+}
