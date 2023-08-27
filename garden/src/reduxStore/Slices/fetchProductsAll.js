@@ -1,5 +1,4 @@
 import { createSlice , createAsyncThunk } from "@reduxjs/toolkit";
-import { act } from "react-dom/test-utils";
 
 const initialState = {
     productsData: [],
@@ -8,7 +7,8 @@ const initialState = {
     TO: 1000000,
     productsAll: [],
     prducstsSale: [],
-    productsCart: [],
+    eachProduct: {},
+    cartTotal: 0,
     cartAmount: 0,
     status: "nothing"
 };
@@ -59,16 +59,51 @@ export const productsSlice = createSlice({
         adToCart: ( state ,action ) =>{
             if(state.productsAll[action.payload].amount){
                 state.productsAll[action.payload].amount +=1
+                const elem = state.productsAll[action.payload];
+                const money = elem.discont_price ? elem.discont_price : elem.price
+                state.cartTotal = state.cartTotal + money
+                
+                
             }else{
                 state.productsAll[action.payload].amount = 1
+                const elem = state.productsAll[action.payload];
+                const money = elem.discont_price ? elem.discont_price : elem.price
+                state.cartTotal = state.cartTotal + money
+    
             }
             state.cartAmount +=1;
+            state.eachProduct = state.productsAll[action.payload]
         },
         deleteFromCart: ( state , action ) =>{
          state.cartAmount = state.cartAmount - state.productsAll[action.payload].amount;
+         const elem = state.productsAll[action.payload];
+         const money = elem.discont_price ? elem.discont_price : elem.price;
+         const total = money * elem.amount
+         state.cartTotal = state.cartTotal - total
          delete state.productsAll[action.payload].amount;
-         
-         }
+        
+        },
+        increaseAmount: ( state , action ) =>{
+            state.productsAll[action.payload].amount += 1;
+            state.productsData[action.payload].amount +=1;
+            state.cartAmount += 1;
+            const elem = state.productsAll[action.payload];
+            const money = elem.discont_price ? elem.discont_price : elem.price
+            state.cartTotal = state.cartTotal + money
+        },
+        decreaseAmount: ( state , action ) =>{
+            state.productsAll[action.payload].amount -= 1;
+    
+            state.cartAmount -= 1;
+            const elem = state.productsAll[action.payload];
+            const money = elem.discont_price ? elem.discont_price : elem.price
+            state.cartTotal = state.cartTotal - money
+        },
+        detailedProduct: ( state , action ) =>{
+            state.eachProduct = state.productsAll[action.payload]
+            
+        }
+
     },
     extraReducers:{
         [fetchProducts.pending]: (state)=>{
@@ -78,7 +113,8 @@ export const productsSlice = createSlice({
             state.status = "resolved";
             state.productsData = action.payload;
             state.productsAll = action.payload;
-            state.prducstsSale = action.payload.filter((elem)=>elem.discont_price)
+            state.prducstsSale = action.payload.filter((elem)=>elem.discont_price);
+            state.eachProduct = action.payload[0];
         },
         [fetchProducts.rejected]: (state)=>{
             state.status = "rejected";
@@ -86,5 +122,7 @@ export const productsSlice = createSlice({
     }
      });
 
-     export const {saleFilter,priceFrom,priceTo,sortedBy,adToCart,deleteFromCart} = productsSlice.actions;
+     export const {saleFilter,priceFrom,priceTo,sortedBy,
+        adToCart,deleteFromCart,
+        increaseAmount,detailedProduct,decreaseAmount } = productsSlice.actions;
      export default productsSlice.reducer;

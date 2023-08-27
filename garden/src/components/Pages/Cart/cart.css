@@ -14,14 +14,12 @@
 
 }
 .cartContainer{
+    width: 840px;
+    min-height: 924px;
     margin-top: 172px;
     margin-left: 20px;
     padding-bottom: 150px;
-    width: 840px;
-    min-height: 924px;
-    top: 172px;
     border-top: 2px solid grey;
-   
 }
 .backToStore{
     position: absolute;
@@ -29,7 +27,6 @@
     top: 117px;
     font-size: 20px;
     font-weight: 800;
-
 }
 .letAngle{
     position: absolute;
@@ -39,15 +36,14 @@
     color: grey;
 }
 .orderDetails{
-    position: absolute;
     width: 500px;
     height: 390px;
-    border-radius: 20px;
+    position: absolute;
     right: 28px;
     top: 180px;
+    border-radius: 20px;
     border: 2px solid black;
     padding: 20px;
-
 }
 .orerFormTitle{
     font-weight: 900;
@@ -60,8 +56,6 @@
     display:  flex;
     justify-content: space-between;
     align-items: center;
-
-        
 }
 .total2{
     font-size: 27px;
@@ -73,7 +67,6 @@
 }
 .dolar22{
     font-size: 10px;
-
 }
 .orderDetails input{
     width: 450px;
@@ -84,12 +77,11 @@
     padding-left: 30px;
     color: grey;
     border: 1px solid grey;
-
 }
 .orderDetails button{
-    margin-top: 22px;
     width: 450px;
     height: 75px;
+    margin-top: 22px;
     background-color: #393;
     border-radius: 20px;
     color:#FFF;
@@ -97,10 +89,4 @@
     font-weight: 800;
     cursor: pointer;
     border: none;
-    
-}
-.something{
-    width: 100%;
-    height: 256px;
-    border: 3px solid red;
 }

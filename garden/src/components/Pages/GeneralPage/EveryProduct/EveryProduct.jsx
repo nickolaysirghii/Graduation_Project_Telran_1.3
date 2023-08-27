@@ -2,22 +2,26 @@ import React from 'react';
 import "./everyProduct.css";
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { adToCart } from '../../../../reduxStore/Slices/fetchProductsAll';
+import { adToCart , detailedProduct } from '../../../../reduxStore/Slices/fetchProductsAll';
 
 
-const EveryProduct = ({elem , idx}) => {
+const EveryProduct = ({elem}) => {
     const { price,title,discont_price,image,amount } = elem;
+    const earned = discont_price ? discont_price - price : 0;
+    const percent = discont_price ? earned / (price / 100) : 0;
     const dispatcher = useDispatch();
 
     const short = "Hallo short"
-    const AD_TO_CART = ()=>{dispatcher(adToCart(idx))};
+    const AD_TO_CART = ()=>{dispatcher(adToCart(elem.id - 1))};
+
+    
 
   return (
         <div className='every'>
              <Link to="/eachProduct">
-                  <div /*onClick={detailed}*/
+                  <div onClick={()=>dispatcher(detailedProduct(elem.id -1))}
                    className='imageProduct' 
-                   style={{backgroundImage:`url(http://localhost:3333/${image})`}} />
+                  style={{backgroundImage:`url(http://localhost:3333/${image})`}} />
               </Link>
             <p className='priceProduct2'>{price}<span>$</span></p>
             { 
@@ -28,7 +32,7 @@ const EveryProduct = ({elem , idx}) => {
             { 
                discont_price &&
                             <p className='percentOfDiscount'>
-                            {`-${(price/discont_price).toFixed(2)}`}<span>%</span></p>
+                            {`${(percent).toFixed(2)}`}<span>%</span></p>
             }
             <p className='productTitle'>{title.length > 25 ? short : title}</p>
             <button className={amount ? "showNewButton" : 'NewButton' }

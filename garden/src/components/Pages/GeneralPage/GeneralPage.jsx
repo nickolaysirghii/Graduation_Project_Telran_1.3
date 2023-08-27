@@ -38,7 +38,7 @@ return (
                   {
                       productsAll.map((elem , idx)=>{
                           if(elem.price >= FROM && elem.price <= TO)
-                              {return <EveryProduct idx={idx} elem={elem} key={idx}>{}</EveryProduct>}
+                              {return <EveryProduct elem={elem} key={idx}>{}</EveryProduct>}
                           else{return null}
                              })
                   }
