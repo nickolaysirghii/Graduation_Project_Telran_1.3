@@ -2,7 +2,7 @@ import React from 'react';
 import "./header.css";
 import bag from "../../svg/bag.svg";
 import { Link } from 'react-router-dom';
-import { useDispatch } from "react-redux";
+import { useDispatch , useSelector } from "react-redux";
 import { fetchProducts } from '../../reduxStore/Slices/fetchProductsAll';
 import { fetchCategoryes } from '../../reduxStore/Slices/fetchCategries';
 import { useEffect } from 'react';
@@ -10,10 +10,11 @@ import { useEffect } from 'react';
 
 
 const Header = () => {
-  const numberOfProducts = 2;
   const dispatcher = useDispatch();
+  const data1 = useSelector((state)=>state.allProducts.productsAll);
+  const dataSale = useSelector((state)=>state.allProducts.prducstsSale);
+  const cartAmount = useSelector((state)=>state.allProducts.cartAmount);
   useEffect(()=>{dispatcher(fetchProducts());dispatcher(fetchCategoryes())},[]);
- 
 
   return (
     <header className='header'>
@@ -25,7 +26,7 @@ const Header = () => {
                   <Link to="/sales/all">All sales</Link>
            </div>
            <Link to="/cart"><img src={bag} alt='bag' className='bag'/></Link>
-           <div className={numberOfProducts > 0 ? "cartAmount" : "cartHidden"}>{numberOfProducts}</div>
+           <div className={cartAmount > 0 ? "cartAmount" : "cartHidden"}>{cartAmount}</div>
     </header>
   )
 }

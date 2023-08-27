@@ -20,23 +20,21 @@
     display: flex;
     align-items: center;
     padding-left: 30px;
-
 }
 .toolsForm button{
-    color: green;
+    width: 100px;
     height: 85%;
     margin-left: 30px;
-    width: 100px;
     font-weight: 600;
     background-color:  #F1FFF1;
     border: 2px solid green;
+    color: green;
     border-radius: 20px;
     cursor: pointer;
 }
 .toolPrice{
     font-size: 22px;
     font-weight: 700;
-
 }
 .from{
     height: 94%;
@@ -74,7 +72,6 @@
     height: 90%;
     border-radius: 20px;
     margin-left: 32px;
-
 }
 .sortedTools{
     margin-left: 85px;

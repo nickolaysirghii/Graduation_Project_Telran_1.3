@@ -11,16 +11,15 @@
     position: relative;
     background-size: contain;
     background-repeat: no-repeat;
-
 }
-.amOf{
+.productsDontExist{
     width: 30px;
     height: 30px;
-    border-radius: 50px;
     position: absolute;
-    background-color: #FF32A1;
     top: 0;
     right: 0;
+    border-radius: 50px;
+    background-color: #FF32A1;
     color: #F1FFF1;
     font-size: 16px;
     display: flex;
@@ -29,7 +28,7 @@
     visibility: hidden;
 
 }
-.amOf2{
+.productsExist{
     width: 30px;
     height: 30px;
     border-radius: 50px;
@@ -42,7 +41,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .priceProduct2{
@@ -52,8 +50,8 @@
     margin-top: 6px;
 }
 .priceProduct2 span{
-font-size: 20px;
-margin-left: 5px;
+    font-size: 20px;
+    margin-left: 5px;
 }
 .oldPrice2{
     position: absolute;
@@ -63,15 +61,14 @@ margin-left: 5px;
     font-weight: 800;
     text-decoration: line-through;
     color: grey;
-
 }
 .percentOfDiscount{
-color: #FF32A1;
-position: absolute;
-right: 40px;
-font-size: 20px;
-font-weight: 900;
-bottom: 40px;
+    color: #FF32A1;
+    position: absolute;
+    right: 40px;
+    font-size: 20px;
+    font-weight: 900;
+    bottom: 40px;
 }
 .productTitle{
     font-size: 18px;
@@ -94,7 +91,6 @@ bottom: 40px;
     background: #F1FFF1;
     cursor: pointer;
     visibility: hidden;
-
 }
 .showNewButton {
     height: 72px;
