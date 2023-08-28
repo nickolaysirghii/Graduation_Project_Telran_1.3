@@ -6,15 +6,15 @@ import { saleFilter,priceFrom,priceTo,sortedBy } from '../../../reduxStore/Slice
 
 
 
-const GeneralPage = () => {
-  const { productsAll ,FROM , TO } = useSelector((state)=>state.allProducts);
+const GeneralPage = ({title , data}) => {
+  const { FROM , TO } = useSelector((state)=>state.allProducts);
+  const checkCart = useSelector((state)=>state.allProducts.cartData);
   const dispatcher = useDispatch()
  
           const checkSale = ()=>{dispatcher(saleFilter())};
           const fromFunction = (e)=>{dispatcher(priceFrom(e.target.value))};
           const tofunction = (e)=>{dispatcher(priceTo(e.target.value))};
            const sortedByFunction = (e)=>{dispatcher(sortedBy(e.target.value))};
-const title = "Hallo"
 
 return (
         <div className='tools'>
@@ -36,9 +36,15 @@ return (
             </form>
             <div className='toolContainer'>
                   {
-                      productsAll.map((elem , idx)=>{
+                      data.map((elem , idx)=>{
+                        let checkAmount = false;
+                        checkCart.forEach((check)=>{
+                          if(elem.id === check.id){
+                            checkAmount = check.amount
+                          }
+                        })
                           if(elem.price >= FROM && elem.price <= TO)
-                              {return <EveryProduct elem={elem} key={idx}>{}</EveryProduct>}
+                              {return <EveryProduct elem={elem} amount={checkAmount} key={idx}>{}</EveryProduct>}
                           else{return null}
                              })
                   }

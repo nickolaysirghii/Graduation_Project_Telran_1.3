@@ -11,8 +11,6 @@ import { useEffect } from 'react';
 
 const Header = () => {
   const dispatcher = useDispatch();
-  const data1 = useSelector((state)=>state.allProducts.productsAll);
-  const dataSale = useSelector((state)=>state.allProducts.prducstsSale);
   const cartAmount = useSelector((state)=>state.allProducts.cartAmount);
   useEffect(()=>{dispatcher(fetchProducts());dispatcher(fetchCategoryes())},[]);
 

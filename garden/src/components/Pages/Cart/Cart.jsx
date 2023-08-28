@@ -10,8 +10,10 @@ import { useSelector } from "react-redux";
 
 
 const Cart = () => {
-  const {cartTotal , productsAll} = useSelector((state)=>state.allProducts);
- const sendStatus = false;
+  const { productsAll } = useSelector((state)=>state.allProducts);
+  const checkCart = useSelector((state)=>state.allProducts.cartData);
+  const sendStatus = false;
+  let TotalMoney = 0;
 return (
     <div className='cart'>
         <h2 className='cartTitle'>Shopping cart</h2>
@@ -20,8 +22,15 @@ return (
         <div className='cartContainer'>
          {
             productsAll.map((elem,idx)=>{
-              if(elem.amount){
-                return <CartProduct key={idx} element = {elem}/>
+              let checkAmount = 0;
+              checkCart.forEach((check)=>{
+                if(elem.id === check.id){
+                  checkAmount = check.amount
+                }
+              })
+              if(checkAmount !== 0){
+                TotalMoney = TotalMoney + ((elem.discont_price ? elem.discont_price : elem.price)*checkAmount)
+                return <CartProduct key={idx}  amount={checkAmount} element = {elem}/>
               }else 
               return null
               })
@@ -31,7 +40,7 @@ return (
                 <p className='orerFormTitle'>Order details</p>
                 <div className='total'>
                     <p className='total2'>Total</p>
-                    <p className='totalPriceNumber'>{cartTotal.toFixed(2)}
+                    <p className='totalPriceNumber'>{TotalMoney.toFixed(2)}
                        <span className='dolar22'>$</span>
                    </p>
                 </div>

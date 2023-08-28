@@ -5,13 +5,13 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch } from "react-redux";
 import { deleteFromCart,increaseAmount,decreaseAmount } from '../../../../reduxStore/Slices/fetchProductsAll';
 
-const CartProduct = ({element}) => {
- const { amount,discont_price,price} = element;
+const CartProduct = ({element , amount , total}) => {
+ const { discont_price,price} = element;
  const dispatcher = useDispatch();
 
-const deleteProduct = () =>{dispatcher(deleteFromCart(element.id -1))}
-const increaseProduct = () =>{dispatcher(increaseAmount(element.id -1))}
-const decreaseProduct = () =>{dispatcher(decreaseAmount(element.id -1))}
+const deleteProduct = () =>{dispatcher(deleteFromCart(element.id ))}
+const increaseProduct = () =>{dispatcher(increaseAmount(element.id))}
+const decreaseProduct = () =>{dispatcher(decreaseAmount(element.id))}
  
   return (
     <div className='cartProduct'>

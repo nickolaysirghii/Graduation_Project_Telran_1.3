@@ -1,0 +1,27 @@
+.categories{
+    width: 1440px;
+    height: 1083px;
+    background-size: contain;
+    position: relative;
+
+}
+.categories h2{
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    font-size: 40px;
+    letter-spacing: 2.5px;
+    font-weight: 900;
+
+}
+.catContainer{
+    width: 1440px;
+    height: 930px;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    padding: 30px;
+}
