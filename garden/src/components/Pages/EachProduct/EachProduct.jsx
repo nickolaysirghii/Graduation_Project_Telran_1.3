@@ -1,17 +1,31 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import "./eachProduct.css";
-import {  useSelector , useDispatch } from "react-redux"
-import { adToCart } from "../../../reduxStore/Slices/fetchProductsAll"
+import {  useSelector , useDispatch } from "react-redux";
+import { adToCart } from "../../../reduxStore/Slices/fetchProductsAll";
+import { fetchProudct } from "../../../reduxStore/Slices/fetchEachProduct"
+
 
 
 const EachProduct = () => {
-  const dispatcher = useDispatch();
-  const product = useSelector((state)=>state.allProducts.eachProduct)
-  const {price,discont_price,image,title,amount,description,id} = product;
-      const earned = discont_price ? discont_price - price : 0;
-      const percent = discont_price ? earned / (price / 100) : 0;
   
- const adFunction = () =>{dispatcher(adToCart(id - 1))}
+  const dispatcher = useDispatch();
+  useEffect(()=>{dispatcher(fetchProudct())},[]);
+
+  const product = useSelector((state)=>state.eachProduct.product);
+  const { cartData }= useSelector((state)=>state.allProducts)
+ 
+  const {price,discont_price,image,title,description,id} = product;
+  let amount = 0;
+  cartData.forEach((elem)=>{
+    if(elem.id === id){
+     amount = elem.amount
+    }
+  });
+
+  const earned = discont_price ? discont_price - price : 0;
+  const percent = discont_price ? earned / (price / 100) : 0;
+
+ const adFunction = () =>{dispatcher(adToCart(id))}
  return (
     <div className='eachProduct'>
         <div className='eachPrTitle'>{title}</div>
@@ -24,7 +38,7 @@ const EachProduct = () => {
               <span className='percent'>{discont_price ? "%" : ""}</span>
         </p>
         <button className='toCart' onClick={adFunction}>To Cart
-        <div className={amount ? "five" : "six"}>{amount}</div>
+        <div className={amount !== 0 ? "five" : "six"}>{amount}</div>
         </button>
         <div className='description'>
             <p className='sedDescrip'>Description</p>

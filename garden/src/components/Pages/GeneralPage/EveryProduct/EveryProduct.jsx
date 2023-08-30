@@ -15,6 +15,7 @@ const EveryProduct = ({elem , amount}) => {
     const AD_TO_CART = ()=>{
       dispatcher(adToCart(elem.id))
     };
+    const shortedTitle = `${elem.title.slice(0,25)}...`;
 
     
 
@@ -36,7 +37,7 @@ const EveryProduct = ({elem , amount}) => {
                             <p className='percentOfDiscount'>
                             {`${(percent).toFixed(2)}`}<span>%</span></p>
             }
-            <p className='productTitle'>{title.length > 25 ? short : title}</p>
+            <p className='productTitle'>{title.length > 25 ? shortedTitle : title}</p>
             <button className={amount ? "showNewButton" : 'NewButton' }
                     onClick={AD_TO_CART}>
 

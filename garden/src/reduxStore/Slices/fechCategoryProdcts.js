@@ -1,8 +1,8 @@
 import { createSlice , createAsyncThunk } from "@reduxjs/toolkit";
 
 const initialState = {
-    categoryProducts: [],
-    status: "nothing"
+    categoryProducts: {},
+    status: "nothing",
 };
 
 export const fetchCategoryProducts = createAsyncThunk(

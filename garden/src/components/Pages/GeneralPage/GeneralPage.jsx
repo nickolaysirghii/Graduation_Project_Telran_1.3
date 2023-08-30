@@ -5,16 +5,33 @@ import { useSelector , useDispatch } from 'react-redux';
 import { saleFilter,priceFrom,priceTo,sortedBy } from '../../../reduxStore/Slices/fetchProductsAll';
 
 
-
 const GeneralPage = ({title , data}) => {
-  const { FROM , TO } = useSelector((state)=>state.allProducts);
-  const checkCart = useSelector((state)=>state.allProducts.cartData);
-  const dispatcher = useDispatch()
+  const { FROM , TO , SortData , CheckSale , cartData } = useSelector((state)=>state.allProducts);
+  const dispatcher = useDispatch();
+  const data2 = [...data];
+  let sortedArray = [];
+  let saleArray = [];
+
+  if(CheckSale){
+   saleArray = data2.filter((elem)=>elem.discont_price)
+  }else{
+    saleArray = data2
+  }
+  if(SortData === "default"){
+    sortedArray = saleArray;
+  }else if(SortData === "first"){
+    sortedArray = saleArray.sort((a,b)=>a.price - b.price);
+  }else if(SortData === "second"){
+    sortedArray = saleArray.sort((a,b)=>b.price - a.price);
+  }else if(SortData === "text"){
+    sortedArray = saleArray.sort((a,b)=>a.title.localeCompare(b.title))
+  }
  
-          const checkSale = ()=>{dispatcher(saleFilter())};
+          const checkSale = ()=>{dispatcher(saleFilter());};
           const fromFunction = (e)=>{dispatcher(priceFrom(e.target.value))};
           const tofunction = (e)=>{dispatcher(priceTo(e.target.value))};
            const sortedByFunction = (e)=>{dispatcher(sortedBy(e.target.value))};
+
 
 return (
         <div className='tools'>
@@ -36,9 +53,9 @@ return (
             </form>
             <div className='toolContainer'>
                   {
-                      data.map((elem , idx)=>{
+                      sortedArray.map((elem , idx)=>{
                         let checkAmount = false;
-                        checkCart.forEach((check)=>{
+                        cartData.forEach((check)=>{
                           if(elem.id === check.id){
                             checkAmount = check.amount
                           }

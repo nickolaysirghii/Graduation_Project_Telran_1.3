@@ -1,21 +1,25 @@
 
 import './App.css';
 import Header from './components/1Header/Header';
-import AllProducts from './components/Pages/AllProducts/Allproducts1';
 import Footer from './components/Z_Footer/Footer';
-import AllSales from './components/Pages/AllSales/AllSales1';
-import Categories from './components/Pages/Categories/Categories';
-import CategoryProducts from './components/Pages/CategoryProducts/CategoryProducts';
-import Cart from "./components/Pages/Cart/Cart"
+import { pagesData } from "./routes";
+import { Route, Routes } from 'react-router-dom';
+
 
 function App() {
   return (
     <div className="App">
-        <Header />
-          <Categories />
-          <CategoryProducts />
-          <Cart />
-        <Footer />
+      <div className='container'>
+           <Header />
+                <Routes>
+                  {
+                    pagesData.map((elem,idx)=>{
+                     return <Route key={idx} path={elem.path} Component={elem.element} />
+                    })
+                  }
+               </Routes>
+           <Footer />
+      </div>
     </div>
   );
 }

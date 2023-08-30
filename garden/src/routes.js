@@ -1,33 +1,17 @@
-
-import Cart from "./components/Pages/Cart/Cart"
-import NotFound from "./components/Z_NotFound/NotFound";
-import EachProduct from "./components/Pages/EachProduct/EachProduct";
+import Home from "./components/Pages/Home/Home";
 import AllProducts from "./components/Pages/AllProducts/Allproducts1";
 import AllSales from "./components/Pages/AllSales/AllSales1";
 import Categories from "./components/Pages/Categories/Categories";
 import CategoryProducts from "./components/Pages/CategoryProducts/CategoryProducts";
-
-
-
+import EachProduct from "./components/Pages/EachProduct/EachProduct";
+import Cart from "./components/Pages/Cart/Cart"
+import NotFound from "./components/Z_NotFound/NotFound";
 
 export const pagesData = 
-
 [
     {
         "path": "/",
-        "element": "Home",
-    },
-    {
-        "path": "/categories",
-        "element": Categories,
-    },
-    {
-        "path": "/cart",
-        "element":Cart,
-    },
-    {
-        "path": "/eachProduct",
-        "element":EachProduct,
+        "element": Home,
     },
     {
         "path": "/products/all",
@@ -38,13 +22,23 @@ export const pagesData =
         "element": AllSales,
     },
     {
-        "path": "/eachCategory",
+        "path": "/categories",
+        "element": Categories,
+    },
+    {
+        "path": "/categories/1",
         "element": CategoryProducts,
+    },
+    {
+        "path": "/eachProduct",
+        "element":EachProduct,
+    },
+    {
+        "path": "/cart",
+        "element":Cart,
     },
     {
         "path": "/*",
         "element": NotFound,
     },
-   
-  
 ];

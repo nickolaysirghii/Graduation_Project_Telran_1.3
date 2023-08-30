@@ -1,18 +1,16 @@
 import React from 'react';
 import GeneralPage from "../GeneralPage/GeneralPage";
+import  Categories from "../Categories/Categories";
 import { useSelector } from 'react-redux';
 
+
 const CategoryProducts = () => {
-    const CategoryProducts = useSelector((state)=>state.categoryProducts.categoryProducts);
-    const category2 = useSelector((state)=>state.allProducts.productsAll);
-    const  { category , data } =  CategoryProducts;
-    console.log()
-    
+    const  { category , data } =  useSelector((state)=>state.categoryProducts.categoryProducts);
 
     if(data){
          return (<GeneralPage title={category.title} data={data} />)
     }else{
-      return ( <p> "Loading </p>)
+         return ( <Categories/>)
     }
 }
 

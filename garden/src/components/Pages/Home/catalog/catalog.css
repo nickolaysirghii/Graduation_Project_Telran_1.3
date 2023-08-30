@@ -1,0 +1,35 @@
+.catalog{
+    width: 1440px;
+    height: 618px;
+    background-size: contain;
+    position: relative;
+    padding: 30px;
+    
+}
+.catalogTitle{
+    position: absolute;
+    top: 50px;
+    font-size: 44px;
+    line-height: 33px;
+
+}
+.catalog button{
+    position: absolute;
+    left: 295px;
+    top: 52px;
+    background-color: transparent;
+    color: #8B8B8B;
+    font-size: 15px;
+    width: 120px;
+    height: 30px;
+    border-color: #8B8B8B;
+    cursor: pointer;
+}
+.catalogContainer{
+    width: 1380px;
+    height: 450px;
+    position: absolute;
+    top: 110px;
+    display: flex;
+    justify-content: space-between;
+}

@@ -3,6 +3,7 @@ import { createSlice , createAsyncThunk } from "@reduxjs/toolkit";
 const initialState = {
     productsData: [],
     CheckSale: false,
+    SortData: "default",
     FROM: 0,
     TO: 1000000,
     productsAll: [],
@@ -28,11 +29,6 @@ export const productsSlice = createSlice({
     reducers: {
         saleFilter: (state)=>{
             state.CheckSale = !state.CheckSale
-            if(state.CheckSale){
-                state.productsAll = state.productsAll.filter((elem)=>elem.discont_price)
-            }else{
-                state.productsAll = state.productsData
-            }
         },
         priceFrom: ( state , action ) =>{
             state.FROM = action.payload
@@ -41,16 +37,7 @@ export const productsSlice = createSlice({
             state.TO = action.payload
         },
         sortedBy: ( state , action ) =>{
-            if(action.payload === "default"){
-                const filtredProducts = state.productsAll.filter((elem)=>elem.discont_price)
-                state.productsAll = state.CheckSale ? filtredProducts : state.productsData
-            }else if( action.payload === "first"){
-                state.productsAll = state.productsAll.sort((a,b)=>a.price - b.price)
-            }else if( action.payload === "second"){
-                state.productsAll = state.productsAll.sort((a,b)=>b.price - a.price)
-            }else{
-                state.productsAll = state.productsAll.sort((a,b)=>a.title.localeCompare(b.title))
-            }
+        state.SortData = action.payload
         },
         adToCart: ( state ,action ) =>{
             const next = { id: action.payload, amount: 1 }
@@ -91,7 +78,6 @@ export const productsSlice = createSlice({
         },
         [fetchProducts.fulfilled]: (state,action)=>{
             state.status = "resolved";
-            state.productsData = action.payload;
             state.productsAll = action.payload;
            
         },

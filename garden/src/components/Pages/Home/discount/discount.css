@@ -1,0 +1,67 @@
+
+.discount{
+    width: 1440px;
+    height: 480px;
+    background: linear-gradient(223deg, #393 0%, #006300 100%);
+    background-size: contain;
+    position: relative;
+}
+.elf{
+    width: 422px;
+    height: 422px;
+    background-image: url(../../../../../public/images/elf.png);
+    position: absolute;
+    top: 25px;
+    left: 90px;
+}
+.discount strong{
+    position: absolute;
+    right: 425px;
+    top: 42px;
+    font-size: 95px;
+    font-weight: 900;
+    letter-spacing: 2.7px;
+    color: #FFF;
+}
+.discount p{
+    position: absolute;
+    right: 260px;
+    top: 140px;
+    font-size: 55.6px;
+    font-weight: 900;
+    color: #FFF;
+
+}
+.discount input{
+    width: 474px;
+    height: 75px;
+    border-radius: 25px;
+    position: absolute;
+    right: 254px;
+    top: 249px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: gray;
+    padding-left: 50px;
+    border: 1px solid white;
+    
+}
+.discount button{
+    width: 474px;
+    height: 75px;
+    border-radius: 25px;
+    position: absolute;
+    right: 254px;
+    bottom: 47px;
+    font-size: 28px;
+    font-weight: 800;
+    color: #FFF;
+    border: 3px solid #FFF;
+    background: none;
+    cursor: pointer;
+
+
+    
+}
