@@ -1,7 +1,8 @@
 import { createSlice , createAsyncThunk } from "@reduxjs/toolkit";
 
 const initialState = {
-    categoryProducts: {},
+    categoryProducts: [],
+    categoryTitle: "",
     status: "nothing",
 };
 
@@ -25,7 +26,8 @@ export const categoryProductsSlice = createSlice({
         },
         [fetchCategoryProducts.fulfilled]: (state,action)=>{
             state.status = "resolved";
-            state.categoryProducts = action.payload;
+            state.categoryProducts = [...action.payload.data];
+            state.categoryTitle= action.payload.category.title;
         },
         [fetchCategoryProducts.rejected]: (state)=>{
             state.status = "rejected";
@@ -33,5 +35,4 @@ export const categoryProductsSlice = createSlice({
     }
      })
 
-     export const {} = categoryProductsSlice.actions;
      export default categoryProductsSlice.reducer;

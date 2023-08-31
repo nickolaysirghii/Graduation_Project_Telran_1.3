@@ -7,10 +7,15 @@ import { Route, Routes } from 'react-router-dom';
 
 
 function App() {
+  const headerStyle = {
+     border: "1px solid red"
+  }
   return (
     <div className="App">
       <div className='container'>
-           <Header />
+           <div className='wraper'>
+              <Header className='headerFixed'/>
+           </div>
                 <Routes>
                   {
                     pagesData.map((elem,idx)=>{

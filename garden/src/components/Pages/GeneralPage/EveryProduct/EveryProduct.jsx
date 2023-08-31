@@ -6,12 +6,20 @@ import { adToCart  } from '../../../../reduxStore/Slices/fetchProductsAll';
 
 
 const EveryProduct = ({elem , amount}) => {
-    const { price,title,discont_price,image } = elem;
+    const { price,title,discont_price,image , id } = elem;
     const earned = discont_price ? discont_price - price : 0;
     const percent = discont_price ? earned / (price / 100) : 0;
     const dispatcher = useDispatch();
 
-    const short = "Hallo short"
+    const animationStyle = {
+      visibility: amount ? "visible" : "hidden",
+      position: "absolute",
+      top: "-230px",
+      right: "-800px",
+      ZIndex: "2"
+    }
+    
+
     const AD_TO_CART = ()=>{
       dispatcher(adToCart(elem.id))
     };
@@ -19,10 +27,10 @@ const EveryProduct = ({elem , amount}) => {
 
     
 
-  return (
+    return (
         <div className='every'>
-             <Link to="/eachProduct">
-                  <div /*onClick={()=>dispatcher(detailedProduct(elem.id -1))}*/
+             <Link to={`/products/${id}`}>
+                  <div
                    className='imageProduct' 
                   style={{backgroundImage:`url(http://localhost:3333/${image})`}} />
               </Link>
@@ -39,7 +47,7 @@ const EveryProduct = ({elem , amount}) => {
             }
             <p className='productTitle'>{title.length > 25 ? shortedTitle : title}</p>
             <button className={amount ? "showNewButton" : 'NewButton' }
-                    onClick={AD_TO_CART}>
+                    onClick={AD_TO_CART} >
 
                      {
                        amount ? "Added to cart" : "Add to cart"
@@ -52,6 +60,7 @@ const EveryProduct = ({elem , amount}) => {
                 </div>
               
               </button>
+              <div className='waitAnimation' style={animationStyle}></div>
         </div>
       )
 }

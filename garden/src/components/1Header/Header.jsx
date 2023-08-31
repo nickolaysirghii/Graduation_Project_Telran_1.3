@@ -12,7 +12,12 @@ import { useEffect } from 'react';
 const Header = () => {
   const dispatcher = useDispatch();
   const cartAmount = useSelector((state)=>state.allProducts.cartAmount);
-  useEffect(()=>{dispatcher(fetchProducts());dispatcher(fetchCategoryes())},[]);
+  useEffect(()=>{
+    dispatcher(fetchProducts());
+    dispatcher(fetchCategoryes());
+  },[]
+  
+  );
 
   return (
     <header className='header'>

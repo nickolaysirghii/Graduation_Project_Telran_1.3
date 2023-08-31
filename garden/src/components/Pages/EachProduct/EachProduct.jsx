@@ -3,13 +3,15 @@ import "./eachProduct.css";
 import {  useSelector , useDispatch } from "react-redux";
 import { adToCart } from "../../../reduxStore/Slices/fetchProductsAll";
 import { fetchProudct } from "../../../reduxStore/Slices/fetchEachProduct"
+import { useParams } from 'react-router-dom';
 
 
 
 const EachProduct = () => {
   
   const dispatcher = useDispatch();
-  useEffect(()=>{dispatcher(fetchProudct())},[]);
+  const params = useParams();
+  useEffect(()=>{dispatcher(fetchProudct(params.prod))},[]);
 
   const product = useSelector((state)=>state.eachProduct.product);
   const { cartData }= useSelector((state)=>state.allProducts)

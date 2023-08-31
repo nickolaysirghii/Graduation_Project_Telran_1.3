@@ -26,11 +26,11 @@ export const pagesData =
         "element": Categories,
     },
     {
-        "path": "/categories/1",
+        "path": "/categories/:id",
         "element": CategoryProducts,
     },
     {
-        "path": "/eachProduct",
+        "path": "/products/:prod",
         "element":EachProduct,
     },
     {

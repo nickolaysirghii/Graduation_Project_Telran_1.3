@@ -1,17 +1,23 @@
-import React from 'react';
+import React , { useEffect } from 'react';
 import GeneralPage from "../GeneralPage/GeneralPage";
-import  Categories from "../Categories/Categories";
-import { useSelector } from 'react-redux';
+import { fetchCategoryProducts } from '../../../reduxStore/Slices/fechCategoryProdcts';
+import { useSelector , useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
+
 
 
 const CategoryProducts = () => {
-    const  { category , data } =  useSelector((state)=>state.categoryProducts.categoryProducts);
+    const params = useParams();
+    const dispatcher = useDispatch();
+    useEffect(()=>{dispatcher(fetchCategoryProducts(params.id))},[])
 
-    if(data){
-         return (<GeneralPage title={category.title} data={data} />)
-    }else{
-         return ( <Categories/>)
-    }
+
+    const {categoryProducts , categoryTitle}=  useSelector((state)=>state.categoryProducts);
+    
+
+    
+         return (<GeneralPage title={categoryTitle} data={categoryProducts} />)
+   
 }
 
 export default CategoryProducts
