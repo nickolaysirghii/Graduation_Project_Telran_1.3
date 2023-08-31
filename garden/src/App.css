@@ -12,14 +12,37 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 1;
     
 }
 .container{
     padding-top: 121px;
+    background-color: white;
+    z-index: 6;
 }
 .wraper{
     position: fixed;
     background-color: white;
     top: 0;
-    z-index: 3;
+    z-index: 7;
 }
+.coverBorder{
+    width: 55px;
+    height: 55px;
+    border: 5px solid white;
+    position: absolute;
+    top: 130px;
+    left: 1159px;
+    z-index: 6;
+}
+.coverTwo{
+    width: 55px;
+    height: 55px;
+    border: 5px solid white;
+    position: absolute;
+    top: 130px;
+    left: 1510px;
+    z-index: 6;
+}
+

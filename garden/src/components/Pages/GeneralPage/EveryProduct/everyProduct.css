@@ -11,6 +11,7 @@
     position: relative;
     background-size: contain;
     background-repeat: no-repeat;
+    z-index: 4;
 }
 .productsDontExist{
     width: 30px;
@@ -91,6 +92,7 @@
     background: #F1FFF1;
     cursor: pointer;
     visibility: hidden;
+    z-index: 9;
 }
 .showNewButton {
     height: 72px;
@@ -105,6 +107,7 @@
     border: 2px solid #393;
     background: #F1FFF1;
     cursor: pointer;
+    z-index: 9;
 }
 .every:hover .NewButton{
    visibility: visible;

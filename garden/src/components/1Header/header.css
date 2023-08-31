@@ -1,7 +1,7 @@
 .header{
     width: 1384px;
     height: 72px;
-    margin: 19px 26px 30px 26px;
+    margin: 19px 30px 30px 26px;
     position: relative;
     display: flex;
     align-items: center;
@@ -65,3 +65,31 @@
 .cartHidden{
  visibility: hidden;
 }
+.animationElem{
+    position: absolute;
+    z-index: 5;
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgb(0, 255, 64);
+    background-color: #FF32A1;
+    border-radius: 50px;
+    animation: animateCircke 1s forwards;
+    animation-timing-function: linear;
+}
+@keyframes animateCircke{
+    0%{
+        width: 20px;
+        height: 20px;
+    }
+    50%{
+        width:80px ;
+        height: 80px;
+    }
+    100%{
+    top: 23px;
+    left: 1354px;
+    width: 20px;
+    height: 20px;
+    }
+   }
+ 
