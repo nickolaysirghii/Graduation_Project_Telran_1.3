@@ -27,7 +27,12 @@ const EachProduct = () => {
   const earned = discont_price ? discont_price - price : 0;
   const percent = discont_price ? earned / (price / 100) : 0;
 
- const adFunction = () =>{dispatcher(adToCart(id))}
+ const adFunction = () =>{
+  setTimeout(() => {
+    dispatcher(adToCart(id))
+  },1500);
+  
+}
  return (
     <div className='eachProduct'>
         <div className='eachPrTitle'>{title}</div>

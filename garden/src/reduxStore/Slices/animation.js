@@ -4,7 +4,9 @@ const initialState = {
    apear: false,
    X: 0,
    Y: 0,
-   targetClasses: ""
+   targetClasses: "",
+   cartDependAnimation: 0
+
 };
 
 
@@ -21,10 +23,13 @@ export const animationSlice = createSlice({
         },
         getClass: ( state , action ) =>{
             state.targetClasses = action.payload
+        },
+        cartAnimation: (state , action)=>{
+            state.cartDependAnimation = action.payload
         }
     },
    
      })
 
-     export const { getClass , changeAnimation,changePosition} = animationSlice.actions;
+     export const { cartAnimation , getClass , changeAnimation,changePosition} = animationSlice.actions;
      export default animationSlice.reducer;

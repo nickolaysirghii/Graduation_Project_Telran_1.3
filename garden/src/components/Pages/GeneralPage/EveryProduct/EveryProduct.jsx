@@ -10,18 +10,13 @@ const EveryProduct = ({elem , amount}) => {
     const earned = discont_price ? discont_price - price : 0;
     const percent = discont_price ? earned / (price / 100) : 0;
     const dispatcher = useDispatch();
-
-    const animationStyle = {
-      visibility: amount ? "visible" : "hidden",
-      position: "absolute",
-      top: "-230px",
-      right: "-800px",
-      ZIndex: "2"
-    }
     
 
     const AD_TO_CART = ()=>{
-      dispatcher(adToCart(elem.id))
+      setTimeout(() => {
+        dispatcher(adToCart(elem.id))
+      }, 1500);
+      
     };
     const shortedTitle = `${elem.title.slice(0,25)}...`;
 
@@ -60,7 +55,6 @@ const EveryProduct = ({elem , amount}) => {
                 </div>
               
               </button>
-              <div className='waitAnimation' style={animationStyle}></div>
         </div>
       )
 }

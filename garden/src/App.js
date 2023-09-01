@@ -15,7 +15,7 @@ function App() {
   if(apear){
     setTimeout(() => {
       dispatcher(changeAnimation())
-      }, 1000);
+      }, 1500);
   }
     const getEvent = (e)=>{
     const position = {
@@ -43,8 +43,6 @@ function App() {
                </Routes>
            <Footer />
       </div>
-      <div className='coverBorder'></div>
-      <div className='coverTwo'></div>
     </div>
   );
 }

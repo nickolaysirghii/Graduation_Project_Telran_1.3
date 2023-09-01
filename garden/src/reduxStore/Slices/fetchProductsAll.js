@@ -63,6 +63,7 @@ export const productsSlice = createSlice({
             state.cartData.forEach((elem)=>{
                 if(elem.id === action.payload){ elem.amount += 1 };
             });
+            const g = 0
             state.cartAmount += 1 ;
         },
         decreaseAmount: ( state , action ) =>{

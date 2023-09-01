@@ -13,8 +13,6 @@ const Header = () => {
   const dispatcher = useDispatch();
   const cartAmount = useSelector((state)=>state.allProducts.cartAmount);
   const { targetClasses , X , Y , apear } = useSelector((state)=>state.animation);
-  // console.log(`X: ${X}`);
-  // console.log(`Y: ${Y}`);
   useEffect(()=>{
     dispatcher(fetchProducts());
     dispatcher(fetchCategoryes());
@@ -27,14 +25,28 @@ const Header = () => {
     left: `${X - 125}px`,
     top: `${Y - 42}px`
   }
+  const shadowStyle = {
+    left: `${X - 125}px`,
+    top: `${Y - 42}px`
+  }
   return (
     <header className='header'>
            {
           ( targetClasses === "NewButton" ||
             targetClasses === "toCart"  ||
             targetClasses === "showNewButton" )&&
-              apear && <div style={elemStyle} className='animationElem'></div>
+              apear && <div style={elemStyle} className='shadowElem'></div>
            }
+            {
+          ( targetClasses === "NewButton" ||
+            targetClasses === "toCart"  ||
+            targetClasses === "showNewButton" )&&
+              apear && <div style={shadowStyle} className='animationElem'></div>
+           }
+
+           
+
+
       
            <Link to="/" className='logo'></Link>
            <Link to="/categories"><button>Catalog</button></Link>

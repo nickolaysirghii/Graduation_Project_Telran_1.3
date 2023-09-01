@@ -3,6 +3,7 @@
     height: 400px;
     margin-bottom: 20px;
     position: relative;
+    z-index: 6;
 }
 .imageProduct{
     width: 100%;
@@ -111,12 +112,6 @@
 }
 .every:hover .NewButton{
    visibility: visible;
-}
-.waitAnimation{
-    width: 50px;
-    height: 50px;
-    border: 1px solid red;
-    z-index: 3;
 }
 .DoAnimation{
     width: 100px;
