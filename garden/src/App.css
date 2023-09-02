@@ -23,9 +23,9 @@ body {
 }
 .wraper{
     position: fixed;
-    background-color: white;
     top: 0;
     z-index: 12;
+    background: linear-gradient(  white 70% , transparent);
 }
 
 

@@ -1,7 +1,13 @@
+.headerContainer{
+    height: 122px;
+    width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .header{
     width: 1384px;
     height: 72px;
-    margin: 19px 30px 30px 26px;
     position: relative;
     display: flex;
     align-items: center;
@@ -65,698 +71,62 @@
 .cartHidden{
  visibility: hidden;
 }
+
 .animationElem{
     position: absolute;
-    z-index: 9;
-    width: 150px;
-    height: 150px;
-    background-image: url("../../../public/images/Package-PNG-Clipart.png");
     background-size: contain;
-    border-radius: 50%;
-    animation: animateCircke 1.5s forwards;
-    animation-timing-function: linear;
+    animation: animateCircke 0.5s forwards;
+    animation-timing-function: cubic-bezier(.63,.26,.9,.49);
+    height: 300px;
+    width: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
     
 }
 .shadowElem{
     position: absolute;
-    z-index: 9;
-    width: 150px;
-    height: 150px;
-    border: 1px solid rgb(123, 124, 123);
-    background-color: rgb(135, 130, 130);
-    box-shadow: rgb(67, 66, 66) 20px 30px 10px 10px;
-    animation: animationShadow 1.5s forwards;
-    animation-timing-function: linear;
-    clip-path: polygon(50% 0, 100% 19%, 100% 68%, 50% 100%, 1% 69%, 0 16%);
+    z-index: 2;
+    width: 300px;
+    height: 300px;
+    animation: animationShadow 0.5s forwards;
+    animation-timing-function: cubic-bezier(.63,.26,.9,.49);
+    
 }
 @keyframes animateCircke{
     0%{
-        width: 20px;
-        height: 20px;
-        
+        opacity: 0;
     }
-    10%{
-        width: 30px;
-        height: 30px;
-    }
-    20%{
-        width: 50px;
-        height: 50px;
-        transform: translateX(-27px) translateY(-11px);
-    }
-    30%{
-        width: 70px;
-        height: 70px;
-        transform: translateX(-40px) translateY(-18px);
-    }
-    40%{
-        width: 80px;
-        height: 80px;
-        transform: translateX(-50px) translateY(-25px);
+    5%{
+        opacity: 1; 
     }
     50%{
-        width:80px ;
-        height: 80px;
-        transform: translateX(-50px) translateY(-25px);
+    transform: translateX(-10px) translateY(-10px);
      }
-    60%{
-        width: 80px;
-        height: 80px;
-        transform: translateX(-50px) translateY(-25px);
-    }
-    70%{
-        width: 70px;
-        height: 70px;
-        transform: translateX(-40px) translateY(-18px);
-    }
-    80%{
-        width: 50px;
-        height: 50px;
-        transform: translateX(-27px) translateY(-11px);
-    }
-    90%{
-        width: 30px;
-        height: 30px;
-    }
     100%{
     top: 23px;
     left: 1354px;
     width: 20px;
     height: 20px;
-    
-    }
+   }
 }
-
-
-   @keyframes animationShadow{
+@keyframes animationShadow{
     0%{
-        width: 20px;
-        height: 20px;
-        opacity: 0.3;
-        
+        opacity: 0;
     }
-    10%{
-        width: 30px;
-        height: 30px;
-    }
-    20%{
-        width: 50px;
-        height: 50px;
-        transform: translateX(27px) translateY(11px);
-    }
-    30%{
-        width: 70px;
-        height: 70px;
-        transform: translateX(40px) translateY(18px);
-    }
-    40%{
-        width: 80px;
-        height: 80px;
-        transform: translateX(50px) translateY(25px);
+    5%{
+        opacity: 0.2;
     }
     50%{
-        width:80px ;
-        height: 80px;
-        transform: translateX(50px) translateY(25px);
-        opacity: 0.05;
+        opacity: 0.1;
+        transform: translateX(10px) translateY(10px);
      }
-    60%{
-        width: 80px;
-        height: 80px;
-        transform: translateX(50px) translateY(25px);
-    }
-    70%{
-        width: 70px;
-        height: 70px;
-        transform: translateX(30px) translateY(18px);
-    }
-    80%{
-        width: 50px;
-        height: 50px;
-        transform: translateX(17px) translateY(11px);
-    }
-    90%{
-        width: 30px;
-        height: 30px;
-    }
     100%{
     top: 23px;
     left: 1354px;
     width: 20px;
     height: 20px;
-    opacity: 0.2;
-    
+    opacity: 0.5;
     }
 }
 
-/* @keyframes animateCircke{
-    0%{
-        width: 5.6px; 
-        height: 5.6px;
-        transform: translateX(5.6px) translateY(2.6px);
-    }
-    3%{
-      width: 16.8px;  
-      height: 16.8px ; 
-      transform: translateX(16.8px) translateY(8.4px);
-    }
-    6%{
-        width: 24px; 
-        height: 24px;
-        transform: translateX(24px) translateY(12px);
-    }
-    10%{
-        width: 31.2px; 
-        height: 31.2px;
-        transform: translateX(31.2px) translateY(15.5px);
-    }
-    13%{
-        width: 35.2px; 
-        height: 35.2px;
-        transform: translateX(35.2px) translateY(17.5px);
-    }
-    16%{
-        width: 38.4px; 
-        height: 38.4px;
-        transform: translateX(38.4px) translateY(19.2px);
-    }
-    20%{
-        width: 40.8px; 
-        height: 40.8px;
-        transform: translateX(40.8px) translateY(20.2px);
-    }
-    23%{
-        width: 43.2px; 
-        height: 43.2px;
-        transform: translateX(43.2px) translateY(21.6px);
-    }
-    26%{
-        width: 44.8px; 
-        height: 44.8px;
-        transform: translateX(44.8px) translateY(22.4px);
-    }
-    30%{
-        width: 46.4px; 
-        height: 46.4px;
-        transform: translateX(46.4px) translateY(23.2px);
-    }
-    33%{
-        width: 47.2px; 
-        height: 47.2px;
-        transform: translateX(47.2px) translateY(23.6px);
-    }
-    36%{
-        width: 48px; 
-        height: 48px;
-        transform: translateX(48px) translateY(24px);
-    }
-    40%{
-        width: 48.8px; 
-        height: 48.8px;
-        transform: translateX(48.8px) translateY(24.4px);
-    }
-    43%{
-        width: 49.6px; 
-        height: 49.6px;
-        transform: translateX(49.6px) translateY(24.8px);
-    }
-    46%{
-        width: 50px; 
-        height: 50px;
-        transform: translateX(50px) translateY(25px);
-    }
-    50%{
-        width: 50px; 
-        height: 50px;
-        transform: translateX(50px) translateY(25px);
-    }
-    53%{
-        width: 50px; 
-        height: 50px;
-        transform: translateX(50px) translateY(25px);
-    }
-    56%{
-        width: 50px; 
-        height: 50px;
-        transform: translateX(50px) translateY(25px);
-    }
-    60%{
-        width: 49.6px; 
-        height: 49.6px;
-        transform: translateX(49.6px) translateY(24.8px);
-    }
-    63%{
-        width: 48.8px; 
-        height: 48.8px;
-        transform: translateX(48.8px) translateY(24.4px);
-    }
-    66%{
-        width: 47.2px; 
-        height: 47.2px;
-        transform: translateX(47.2px) translateY(23.6px);
-    }
-    70%{
-        width: 45.6px; 
-        height: 45.6px;
-        transform: translateX(45.6px) translateY(22.8px);
-    }
-    73%{
-        width: 44px; 
-        height: 44px;
-        transform: translateX(44px) translateY(22px);
-    }
-    76%{
-        width: 42.4px; 
-        height: 42.4px;
-        transform: translateX(42.4px) translateY(21.2px);
-    }
-    80%{
-        width: 39.2px; 
-        height: 39.2px;
-        transform: translateX(39.2px) translateY(19.6px);
-    }
-    84%{
-        width: 35.2px; 
-        height: 35.2px;
-        transform: translateX(35.2px) translateY(17.6px);
-    }
-    88%{ 
-        width: 31.2px; 
-        height: 31.2px;
-        transform: translateX(31.2px) translateY(15.6px);
-    }
-    92%{
-        width: 26.4px; 
-        height: 26.4px;
-        transform: translateX(26.4px) translateY(13.2px);
-    }
-    96%{
-        width: 20px; 
-        height: 20px;
-        transform: translateX(20px) translateY(10px);
-    }
-    100%{
-        width: 6.4px; 
-        height: 6.4px;
-        top: 23px;
-        left: 1354px;
-        transform: translateX(6.4px) translateY(3.2px);
-    }
-    }  */
-
-    /* @keyframes animateCircke{
-      
-        0%{
-            width: 38.4px; 
-            height: 38.4px;
-            transform: translateX(0px) translateY(0px);
-        }
-        5%{
-            width: 40.8px; 
-            height: 40.8px;
-            transform: translateX(2.8px) translateY(0.2px);
-        }
-        10%{
-            width: 43.2px; 
-            height: 43.2px;
-            transform: translateX(5.2px) translateY(1.6px);
-        }
-        15%{
-            width: 44.8px; 
-            height: 44.8px;
-            transform: translateX(6.8px) translateY(2.4px);
-        }
-        20%{
-            width: 46.4px; 
-            height: 46.4px;
-            transform: translateX(8.4px) translateY(3.2px);
-        }
-        25%{
-            width: 47.2px; 
-            height: 47.2px;
-            transform: translateX(9.2px) translateY(3.6px);
-        }
-        30%{
-            width: 48px; 
-            height: 48px;
-            transform: translateX(10px) translateY(4px);
-        }
-        35%{
-            width: 48.8px; 
-            height: 48.8px;
-            transform: translateX(10.8px) translateY(4.4px);
-        }
-        40%{
-            width: 49.6px; 
-            height: 49.6px;
-            transform: translateX(11.6px) translateY(4.8px);
-        }
-        45%{
-            width: 50px; 
-            height: 50px;
-            transform: translateX(12px) translateY(5px);
-        }
-        50%{
-            width: 50px; 
-            height: 50px;
-            transform: translateX(12px) translateY(5px);
-        }
-        55%{
-            width: 50px; 
-            height: 50px;
-            transform: translateX(12px) translateY(5px);
-        }
-        60%{
-            width: 50px; 
-            height: 50px;
-            transform: translateX(12px) translateY(5px);
-        }
-        65%{
-            width: 49.6px; 
-            height: 49.6px;
-            transform: translateX(11.6px) translateY(4.8px);
-        }
-        70%{
-            width: 48.8px; 
-            height: 48.8px;
-            transform: translateX(10.8px) translateY(4.4px);
-        }
-        75%{
-            width: 47.2px; 
-            height: 47.2px;
-            transform: translateX(49.2px) translateY(3.6px);
-        }
-        80%{
-            width: 45.6px; 
-            height: 45.6px;
-            transform: translateX(7.6px) translateY(2.8px);
-        }
-        85%{
-            width: 44px; 
-            height: 44px;
-            transform: translateX(6px) translateY(2px);
-        }
-        90%{
-            width: 42.4px; 
-            height: 42.4px;
-            transform: translateX(4.4px) translateY(1.2px);
-        }
-        95%{
-            width: 39.2px; 
-            height: 39.2px;
-            transform: translateX(1.2px) translateY(0.5px);
-        }
-        100%{
-            width: 37.4px; 
-            height: 37.4px;
-            top: 23px;
-            left: 1354px;
-            transform: translateX(0px) translateY(0px);
-        }
-       
-        } */
-
-/* @keyframes animateCircke{
-    0%{
-        width: 50px;
-        height: 50px;
-        
-    }
-    
-    25%{
-        width: 120px;
-        height: 120px;
-
-    }
-    50%{
-        width:150px ;
-        height: 150px;
-        transform: translateX(-50px) translateY(-25px);
-        opacity: 0.5;
-       
-        
-    }
-    25%{
-        width: 120px;
-        height: 120px;
-
-    }
-    100%{
-    top: 23px;
-    left: 1354px;
-    width: 50px;
-    height: 50px;
-    
-    }
-} */
-
-
-
-
-       /* }
-   0%{top: 93%;
-    width: 5.6px; 
-    height: 5.6px;
-}
-3%{top: 79%;
-  width: 16.8px;  
-  height: 16.8px ; 
-}
-6%{top: 70%;
-    width: 24px; 
-    height: 24px;
-}
-10%{top: 61%;
-    width: 31.2px; 
-    height: 31.2px;
-}
-13%{top: 56%;
-    width: 35.2px; 
-    height: 35.2px;
-}
-16%{top: 52%;
-    width: 38.4px; 
-    height: 38.4px;
-}
-20%{top: 49%;
-    width: 40.8px; 
-    height: 40.8px;
-}
-23%{top: 46%;
-    width: 43.2px; 
-    height: 43.2px;
-}
-26%{top: 44%;
-    width: 44.8px; 
-    height: 44.8px;
-}
-30%{top: 42%;
-    width: 46.4px; 
-    height: 46.4px;
-}
-33%{top: 41%;
-    width: 47.2px; 
-    height: 47.2px;
-}
-36%{top: 40%;
-    width: 48px; 
-    height: 48px;
-}
-40%{top: 39%;
-    width: 48.8px; 
-    height: 48.8px;
-}
-43%{top: 38%;
-    width: 49.6px; 
-    height: 49.6px;
-}
-46%{top: 37.5%;
-    width: 50px; 
-    height: 50px;
-}
-50%{top: 37.2%;
-    width: 50px; 
-    height: 50px;
-}
-53%{top: 37.2%;
-    width: 50px; 
-    height: 50px;
-}
-56%{top: 37.5%;
-    width: 50px; 
-    height: 50px;
-}
-60%{top: 38%;
-    width: 49.6px; 
-    height: 49.6px;
-}
-63%{top: 39%;
-    width: 48.8px; 
-    height: 48.8px;
-}
-66%{top: 41%;
-    width: 47.2px; 
-    height: 47.2px;
-}
-70%{top: 43%;
-    width: 45.6px; 
-    height: 45.6px;
-}
-73%{top: 45%;
-    width: 44px; 
-    height: 44px;
-}
-76%{top: 47%;
-    width: 42.4px; 
-    height: 42.4px;
-}
-80%{top: 51%;
-    width: 39.2px; 
-    height: 39.2px;
-}
-84%{top: 56%;
-    width: 35.2px; 
-    height: 35.2px;
-}
-88%{top: 61%; 
-    width: 31.2px; 
-    height: 31.2px;
-}
-92%{top: 67%;
-    width: 26.4px; 
-    height: 26.4px;
-}
-96%{top: 75%;
-    width: 20px; 
-    height: 20px;
-}
-100%{top: 92%;
-    width: 6.4px; 
-    height: 6.4px;
-} */
-
-/* 
-@keyframes animateCircke{
-    0%{
-        width: 5.6px; 
-        height: 5.6px;
-    }
-    3%{
-      width: 16.8px;  
-      height: 16.8px ; 
-    }
-    6%{
-        width: 24px; 
-        height: 24px;
-    }
-    10%{
-        width: 31.2px; 
-        height: 31.2px;
-    }
-    13%{
-        width: 35.2px; 
-        height: 35.2px;
-    }
-    16%{
-        width: 38.4px; 
-        height: 38.4px;
-    }
-    20%{
-        width: 40.8px; 
-        height: 40.8px;
-    }
-    23%{
-        width: 43.2px; 
-        height: 43.2px;
-    }
-    26%{
-        width: 44.8px; 
-        height: 44.8px;
-    }
-    30%{
-        width: 46.4px; 
-        height: 46.4px;
-    }
-    33%{
-        width: 47.2px; 
-        height: 47.2px;
-    }
-    36%{
-        width: 48px; 
-        height: 48px;
-    }
-    40%{
-        width: 48.8px; 
-        height: 48.8px;
-    }
-    43%{
-        width: 49.6px; 
-        height: 49.6px;
-    }
-    46%{
-        width: 50px; 
-        height: 50px;
-    }
-    50%{
-        width: 50px; 
-        height: 50px;
-    }
-    53%{
-        width: 50px; 
-        height: 50px;
-    }
-    56%{
-        width: 50px; 
-        height: 50px;
-    }
-    60%{
-        width: 49.6px; 
-        height: 49.6px;
-    }
-    63%{
-        width: 48.8px; 
-        height: 48.8px;
-    }
-    66%{
-        width: 47.2px; 
-        height: 47.2px;
-    }
-    70%{
-        width: 45.6px; 
-        height: 45.6px;
-    }
-    73%{
-        width: 44px; 
-        height: 44px;
-    }
-    76%{
-        width: 42.4px; 
-        height: 42.4px;
-    }
-    80%{
-        width: 39.2px; 
-        height: 39.2px;
-    }
-    84%{
-        width: 35.2px; 
-        height: 35.2px;
-    }
-    88%{ 
-        width: 31.2px; 
-        height: 31.2px;
-    }
-    92%{
-        width: 26.4px; 
-        height: 26.4px;
-    }
-    96%{
-        width: 20px; 
-        height: 20px;
-    }
-    100%{
-        width: 6.4px; 
-        height: 6.4px;
-        top: 23px;
-        left: 1354px;
-    }
-    } */

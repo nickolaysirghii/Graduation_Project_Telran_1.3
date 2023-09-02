@@ -6,13 +6,10 @@ import { useDispatch , useSelector } from "react-redux";
 import { deleteFromCart,increaseAmount,decreaseAmount } from '../../../../reduxStore/Slices/fetchProductsAll';
 import { cartAnimation } from '../../../../reduxStore/Slices/animation';
 
-const CartProduct = ({element , amount , total}) => {
+const CartProduct = ({element , amount }) => {
  const { discont_price,price} = element;
  const { cartDependAnimation } = useSelector((state)=>state.animation)
- console.log(cartDependAnimation)
  const dispatcher = useDispatch();
-
-console.log(cartDependAnimation)
 const deleteProduct = () =>{dispatcher(deleteFromCart(element.id ))}
 const increaseProduct = () =>{dispatcher(increaseAmount(element.id))
   dispatcher(cartAnimation(1))
@@ -42,7 +39,7 @@ if(cartDependAnimation === 1){
          discont_price && <p className='oldPriceCart'>{`${(price*amount).toFixed(2)}$`}</p>
         }
         
-        <FontAwesomeIcon className='deleteProdCart' icon={faXmark} onClick={deleteProduct} />
+        <div style={{width: "30px", height: "30px"}}><FontAwesomeIcon className='deleteProdCart' icon={faXmark} onClick={deleteProduct} /></div>
         {
          cartDependAnimation === 1 && <div className="animationCart"></div>  
         }

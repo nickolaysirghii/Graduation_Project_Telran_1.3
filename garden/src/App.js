@@ -5,7 +5,7 @@ import Footer from './components/Z_Footer/Footer';
 import { pagesData } from "./routes";
 import { Route, Routes } from 'react-router-dom';
 import { useSelector , useDispatch } from 'react-redux';
-import {getClass , changeAnimation , changePosition} from './reduxStore/Slices/animation';
+import {takeImage , getClass , changeAnimation , changePosition} from './reduxStore/Slices/animation';
 
 
 function App() {
@@ -15,17 +15,25 @@ function App() {
   if(apear){
     setTimeout(() => {
       dispatcher(changeAnimation())
-      }, 1500);
+      }, 500);
   }
+  
     const getEvent = (e)=>{
+    const positionleft = e.target.offsetParent.offsetLeft;
+    const topElement = e.nativeEvent.layerY;
+    const topScreen = e.screenY;
+    const positionTop = topScreen - topElement - 310;
     const position = {
       x:e.clientX,
-      y:e.clientY
+      y:e.clientY,
+      top: positionTop,
+      left:positionleft
       
     }
       dispatcher(changeAnimation())
       dispatcher(changePosition(position))
       dispatcher(getClass(e.target.className))
+      dispatcher(takeImage(e.target.id))
     
     }
   return (

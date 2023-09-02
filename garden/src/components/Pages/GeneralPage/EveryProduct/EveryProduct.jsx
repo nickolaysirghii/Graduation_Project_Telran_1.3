@@ -15,7 +15,7 @@ const EveryProduct = ({elem , amount}) => {
     const AD_TO_CART = ()=>{
       setTimeout(() => {
         dispatcher(adToCart(elem.id))
-      }, 1500);
+      }, 500);
       
     };
     const shortedTitle = `${elem.title.slice(0,25)}...`;
@@ -42,6 +42,7 @@ const EveryProduct = ({elem , amount}) => {
             }
             <p className='productTitle'>{title.length > 25 ? shortedTitle : title}</p>
             <button className={amount ? "showNewButton" : 'NewButton' }
+                    id={image}
                     onClick={AD_TO_CART} >
 
                      {

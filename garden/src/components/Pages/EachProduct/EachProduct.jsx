@@ -4,6 +4,7 @@ import {  useSelector , useDispatch } from "react-redux";
 import { adToCart } from "../../../reduxStore/Slices/fetchProductsAll";
 import { fetchProudct } from "../../../reduxStore/Slices/fetchEachProduct"
 import { useParams } from 'react-router-dom';
+// import {takeImage , getClass , changeAnimation , changePosition} from "../../../reduxStore/Slices/animation"
 
 
 
@@ -17,6 +18,10 @@ const EachProduct = () => {
   const { cartData }= useSelector((state)=>state.allProducts)
  
   const {price,discont_price,image,title,description,id} = product;
+
+
+
+
   let amount = 0;
   cartData.forEach((elem)=>{
     if(elem.id === id){
@@ -28,15 +33,15 @@ const EachProduct = () => {
   const percent = discont_price ? earned / (price / 100) : 0;
 
  const adFunction = () =>{
-  setTimeout(() => {
+ setTimeout(() => {
     dispatcher(adToCart(id))
-  },1500);
-  
+  },500);
 }
  return (
     <div className='eachProduct'>
         <div className='eachPrTitle'>{title}</div>
-        <div className='productPicture' style={{backgroundImage: `url(http://localhost:3333${image})`}}></div>
+        <div className='productPicture' style={{
+          backgroundImage: `url(http://localhost:3333${image})`}}></div>
         <h2 className='priceProduct'>{discont_price ? discont_price : price}
                <span className='dolars'>$</span>
         </h2>
@@ -44,7 +49,7 @@ const EachProduct = () => {
         <p className='percentDiscount'>{ discont_price  ? `-${-percent.toFixed(2)}` : ""}
               <span className='percent'>{discont_price ? "%" : ""}</span>
         </p>
-        <button className='toCart' onClick={adFunction}>To Cart
+        <button id={image} className='toCart' onClick={adFunction}>To Cart
         <div className={amount !== 0 ? "five" : "six"}>{amount}</div>
         </button>
         <div className='description'>
