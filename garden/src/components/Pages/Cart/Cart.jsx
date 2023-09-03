@@ -47,6 +47,7 @@ return (
                <input placeholder='Phone number'type='text' name='phone1' />
                <button >{sendStatus ? "Thank You" : "Order"}</button>
         </form>
+        <Link to="/" className='ungleCover'></Link>
     </div>
   )
 }

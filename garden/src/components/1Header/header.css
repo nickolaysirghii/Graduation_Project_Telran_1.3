@@ -84,49 +84,63 @@
     background-color: white;
     
 }
-.shadowElem{
-    position: absolute;
-    z-index: 2;
-    width: 300px;
-    height: 300px;
-    animation: animationShadow 0.5s forwards;
-    animation-timing-function: cubic-bezier(.63,.26,.9,.49);
-    
-}
 @keyframes animateCircke{
     0%{
         opacity: 0;
     }
-    5%{
+    25%{
         opacity: 1; 
     }
     50%{
-    transform: translateX(-10px) translateY(-10px);
+    opacity: 1;
      }
     100%{
     top: 23px;
     left: 1354px;
     width: 20px;
     height: 20px;
+    opacity: 0;
    }
 }
-@keyframes animationShadow{
-    0%{
-        opacity: 0;
-    }
-    5%{
-        opacity: 0.2;
-    }
-    50%{
-        opacity: 0.1;
-        transform: translateX(10px) translateY(10px);
-     }
-    100%{
-    top: 23px;
-    left: 1354px;
+
+.swallow{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 20px;
+    left: 1329px;
+}
+.swallow div{
     width: 20px;
     height: 20px;
-    opacity: 0.5;
+    background-color: #FF32A1;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    animation: animationSwallow 1s forwards;
+    font-size: 16px;
+}
+@keyframes animationSwallow{
+    0%{
+
+    }
+    50%{
+        width: 20px;
+        height: 20px;
+        font-size: 17px;
+    }
+    75%{
+        width: 50px;
+        height: 50px;
+        font-size: 40px;
+    }
+    100%{
+        width: 20px;
+        height: 20px;
     }
 }
-

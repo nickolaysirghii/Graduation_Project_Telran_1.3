@@ -3,6 +3,7 @@ import "./everyProduct.css";
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { adToCart  } from '../../../../reduxStore/Slices/fetchProductsAll';
+import { changeAnimation } from '../../../../reduxStore/Slices/animation';
 
 
 const EveryProduct = ({elem , amount}) => {
@@ -13,6 +14,7 @@ const EveryProduct = ({elem , amount}) => {
     
 
     const AD_TO_CART = ()=>{
+      dispatcher(changeAnimation())
       setTimeout(() => {
         dispatcher(adToCart(elem.id))
       }, 500);

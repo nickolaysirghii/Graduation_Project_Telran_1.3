@@ -8,18 +8,33 @@ import { cartAnimation } from '../../../../reduxStore/Slices/animation';
 
 const CartProduct = ({element , amount }) => {
  const { discont_price,price} = element;
- const { cartDependAnimation } = useSelector((state)=>state.animation)
+ const { cartDependAnimation , cartId , cartDirection } = useSelector((state)=>state.animation)
  const dispatcher = useDispatch();
 const deleteProduct = () =>{dispatcher(deleteFromCart(element.id ))}
 const increaseProduct = () =>{dispatcher(increaseAmount(element.id))
-  dispatcher(cartAnimation(1))
+  dispatcher(cartAnimation({
+    state: 1,
+    id: element.id,
+    direction: "up"
+  }))
 }
-const decreaseProduct = () =>{dispatcher(decreaseAmount(element.id))}
+const decreaseProduct = () =>{dispatcher(decreaseAmount(element.id))
+  dispatcher(cartAnimation({
+    state: 1,
+    id: element.id,
+    direction: "down"
+  }))
+}
 
 
 if(cartDependAnimation === 1){
+  const cartData = {
+    state: 0,
+    id: element.id,
+    direction: "up"
+  }
   setTimeout(() => {
-    dispatcher(cartAnimation(0))
+    dispatcher(cartAnimation(cartData))
   }, 250);
 }
  
@@ -39,11 +54,13 @@ if(cartDependAnimation === 1){
          discont_price && <p className='oldPriceCart'>{`${(price*amount).toFixed(2)}$`}</p>
         }
         
-        <div style={{width: "30px", height: "30px"}}><FontAwesomeIcon className='deleteProdCart' icon={faXmark} onClick={deleteProduct} /></div>
+        <FontAwesomeIcon className='deleteProdCart' icon={faXmark}  />
         {
-         cartDependAnimation === 1 && <div className="animationCart"></div>  
+        ( cartDependAnimation === 1 && 
+          cartId === element.id)
+         && <div className= {cartDirection === "up" ? "animationCartIncrease" : "animationCartDecreese" }>{amount}</div>  
         }
-        
+        <div className='coverCross' onClick={deleteProduct}></div>
     </div>
   )
 }

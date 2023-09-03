@@ -90,3 +90,11 @@
     cursor: pointer;
     border: none;
 }
+.ungleCover{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 114px;
+    left: 831px;
+    cursor: pointer;
+}

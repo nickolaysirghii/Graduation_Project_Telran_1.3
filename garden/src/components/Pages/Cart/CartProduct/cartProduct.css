@@ -79,22 +79,43 @@
 .animationCartNone{
     visibility: hidden;
 }
-.animationCart{
+.animationCartIncrease{
     width: 30px;
     height: 30px;
     position: absolute;
-    background-image: url("../../../../../public/images/bluOne.png");
+    font-size: 16px;
     background-size: contain;
     top: 160px;
     left: 283px;
+    color: white;
    animation: cartAnimation 0.6s forwards;
+   background-color: green;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50px;
+}
+.animationCartDecreese{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    font-size: 16px;
+    background-size: contain;
+    top: 160px;
+    left: 283px;
+    color: white;
+   animation: cartAnimationDecrease 0.6s forwards;
+   background-color: red;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50px;
 }
 @keyframes cartAnimation{
     0%{
         width: 30px;
         height: 30px;
         position: absolute;
-        background-image: url("../../../../../public/images/bluOne.png");
         background-size: contain;
         top: 160px;
         left: 283px;
@@ -103,11 +124,12 @@
     width: 60px;
     height: 60px;
     position: absolute;
-    background-image: url("../../../../../public/images/bluOne.png");
     background-size: contain;
     top: 10px;
     left: 330px;
     opacity: 0;
+    font-size: 60px;
+    font-weight: 900;
 
    }
 }
@@ -116,20 +138,29 @@
         width: 30px;
         height: 30px;
         position: absolute;
-        background-image: url("../../../../../public/images/redOne.png");
         background-size: contain;
         top: 160px;
         left: 283px;
     }
+
    100%{
     width: 60px;
     height: 60px;
     position: absolute;
-    background-image: url("../../../../../public/images/redOne.png");
     background-size: contain;
     top: 310px;
     left: 236px;
     opacity: 0;
+    font-size: 40px;
 
    }
+}
+
+.coverCross{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 28px;
+    left: 811px;
+    cursor: pointer;
 }

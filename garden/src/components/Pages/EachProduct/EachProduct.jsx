@@ -4,7 +4,7 @@ import {  useSelector , useDispatch } from "react-redux";
 import { adToCart } from "../../../reduxStore/Slices/fetchProductsAll";
 import { fetchProudct } from "../../../reduxStore/Slices/fetchEachProduct"
 import { useParams } from 'react-router-dom';
-// import {takeImage , getClass , changeAnimation , changePosition} from "../../../reduxStore/Slices/animation"
+import { changeAnimation } from "../../../reduxStore/Slices/animation"
 
 
 
@@ -18,6 +18,9 @@ const EachProduct = () => {
   const { cartData }= useSelector((state)=>state.allProducts)
  
   const {price,discont_price,image,title,description,id} = product;
+
+  
+
 
 
 
@@ -33,6 +36,7 @@ const EachProduct = () => {
   const percent = discont_price ? earned / (price / 100) : 0;
 
  const adFunction = () =>{
+  dispatcher(changeAnimation())
  setTimeout(() => {
     dispatcher(adToCart(id))
   },500);
