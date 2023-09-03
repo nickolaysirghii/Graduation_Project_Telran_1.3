@@ -71,7 +71,6 @@
 .cartHidden{
  visibility: hidden;
 }
-
 .animationElem{
     position: absolute;
     background-size: contain;
@@ -81,28 +80,8 @@
     width: 300px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-color: white;
-    
+    background-color: white    
 }
-@keyframes animateCircke{
-    0%{
-        opacity: 0;
-    }
-    25%{
-        opacity: 1; 
-    }
-    50%{
-    opacity: 1;
-     }
-    100%{
-    top: 23px;
-    left: 1354px;
-    width: 20px;
-    height: 20px;
-    opacity: 0;
-   }
-}
-
 .swallow{
     width: 50px;
     height: 50px;
@@ -126,21 +105,30 @@
     font-size: 16px;
 }
 @keyframes animationSwallow{
-    0%{
-
-    }
-    50%{
+ 50%{
         width: 20px;
         height: 20px;
         font-size: 17px;
     }
     75%{
-        width: 50px;
-        height: 50px;
-        font-size: 40px;
+        width: 60px;
+        height: 60px;
+        font-size: 50px;
     }
     100%{
         width: 20px;
         height: 20px;
     }
+}
+@keyframes animateCircke{
+    0%{opacity: 0;}
+    10%{opacity: 1;}
+    90%{opacity: 1;}
+    100%{
+    top: 23px;
+    left: 1354px;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+   }
 }

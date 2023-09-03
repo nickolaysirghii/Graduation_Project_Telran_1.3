@@ -9,6 +9,7 @@ const initialState = {
     productsAll: [],
     cartData: [],
     cartAmount: 0,
+    sendStatus: false,
     status: "nothing"
 };
 
@@ -63,7 +64,6 @@ export const productsSlice = createSlice({
             state.cartData.forEach((elem)=>{
                 if(elem.id === action.payload){ elem.amount += 1 };
             });
-            const g = 0
             state.cartAmount += 1 ;
         },
         decreaseAmount: ( state , action ) =>{
@@ -71,6 +71,14 @@ export const productsSlice = createSlice({
                 if(elem.id === action.payload){ elem.amount -= 1 };
             });
             state.cartAmount -= 1 ;
+        },
+        purchase: ( state ) =>{
+            state.sendStatus = !state.sendStatus;
+            state.cartData = [];
+            state.cartAmount = 0;
+        },
+        returnBack: ( state ) =>{
+            state.sendStatus = !state.sendStatus;
         }
     },
     extraReducers:{
@@ -88,7 +96,8 @@ export const productsSlice = createSlice({
     }
      });
 
-     export const {saleFilter,priceFrom,priceTo,sortedBy,
-        adToCart,deleteFromCart,
-        increaseAmount,decreaseAmount } = productsSlice.actions;
+     export const { purchase,saleFilter,priceFrom,
+                    priceTo,sortedBy,adToCart,
+                    deleteFromCart,increaseAmount,
+                    decreaseAmount,returnBack } = productsSlice.actions;
      export default productsSlice.reducer;

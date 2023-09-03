@@ -4,6 +4,7 @@ import whatsUp from "../../svg/watsUp.svg";
 import instagram from "../../svg/instagram.svg"
 
 const Footer = () => {
+  
   return (
     <div className='footer'>
         <div className='footerInfo'>

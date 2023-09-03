@@ -5,8 +5,8 @@ import { useSelector} from 'react-redux';
 
 
 const SaleRandom = () => {
-  const randomeSale = useSelector((state)=>state.allProducts.productsAll);
-  const SalesArray = randomeSale.filter((elem)=>elem.discont_price)
+  const { productsAll } = useSelector((state)=>state.allProducts);
+  const SalesArray = productsAll.filter((elem)=>elem.discont_price)
 
   const  shuffleArray = (arr)=> {
   const shuffledArray = [...arr]; 

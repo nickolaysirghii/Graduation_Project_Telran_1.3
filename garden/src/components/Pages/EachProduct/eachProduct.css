@@ -9,7 +9,6 @@
     left: 30px;
     font-size: 38px;
     font-weight: 900;
-
 }
 .productPicture{
     width: 710px;
@@ -40,7 +39,6 @@
     font-size: 19px;
     font-weight: 800;
     text-decoration: line-through;
-
 }
 .percentDiscount{
     position: absolute;
@@ -54,7 +52,6 @@
     font-size: 20px;
     margin-left: 2px;
     color: #FF32A1;
-    
 }
 .toCart{
     width: 345px;

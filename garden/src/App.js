@@ -7,16 +7,12 @@ import { Route, Routes } from 'react-router-dom';
 import { useSelector , useDispatch } from 'react-redux';
 import { changeAnimation , changePosition} from './reduxStore/Slices/animation';
 
-
 function App() {
+
   const dispatcher = useDispatch();
   const { apear } = useSelector((state)=>state.animation);
 
-  if(apear){
-    setTimeout(() => {
-      dispatcher(changeAnimation())
-      }, 1000);
-  }
+  if(apear){setTimeout(() => {dispatcher(changeAnimation())}, 1000);}
   
     const getEvent = (e)=>{
      const position = {
@@ -27,6 +23,7 @@ function App() {
                   };
       dispatcher(changePosition(position))
     };
+    
   return (
     <div className="App" onClick={getEvent} >
       <div className='container' >

@@ -7,19 +7,15 @@
     box-sizing: border-box;
     font-family: Montserrat;
 }
-
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    z-index: 1;
-    
 }
 .container{
     padding-top: 121px;
     background-color: white;
-    z-index: 6;
 }
 .wraper{
     position: fixed;

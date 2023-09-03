@@ -4,19 +4,14 @@ import { fetchCategoryProducts } from '../../../reduxStore/Slices/fechCategoryPr
 import { useSelector , useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
-
-
 const CategoryProducts = () => {
+
+    const {categoryProducts , categoryTitle}=  useSelector((state)=>state.categoryProducts);
     const params = useParams();
     const dispatcher = useDispatch();
     useEffect(()=>{dispatcher(fetchCategoryProducts(params.id))},[])
 
-
-    const {categoryProducts , categoryTitle}=  useSelector((state)=>state.categoryProducts);
-    
-
-    
-         return (<GeneralPage title={categoryTitle} data={categoryProducts} />)
+return (<GeneralPage title={categoryTitle} data={categoryProducts} />)
    
 }
 

@@ -3,6 +3,7 @@ import "./sales.css";
 import { Link } from 'react-router-dom';
 
 const Sales = () => {
+  
   return (
     <div className='sales'>
     <p className='title'>Sale</p>

@@ -76,6 +76,14 @@
     cursor: pointer;
     color: grey;
 }
+.coverCross{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 28px;
+    left: 811px;
+    cursor: pointer;
+}
 .animationCartNone{
     visibility: hidden;
 }
@@ -88,12 +96,12 @@
     top: 160px;
     left: 283px;
     color: white;
-   animation: cartAnimation 0.6s forwards;
-   background-color: green;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   border-radius: 50px;
+    animation: cartAnimation 0.6s forwards;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
 }
 .animationCartDecreese{
     width: 30px;
@@ -104,12 +112,12 @@
     top: 160px;
     left: 283px;
     color: white;
-   animation: cartAnimationDecrease 0.6s forwards;
-   background-color: red;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   border-radius: 50px;
+    animation: cartAnimationDecrease 0.6s forwards;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
 }
 @keyframes cartAnimation{
     0%{
@@ -156,11 +164,3 @@
    }
 }
 
-.coverCross{
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 28px;
-    left: 811px;
-    cursor: pointer;
-}

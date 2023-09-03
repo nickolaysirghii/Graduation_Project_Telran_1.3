@@ -6,24 +6,14 @@ import { fetchProudct } from "../../../reduxStore/Slices/fetchEachProduct"
 import { useParams } from 'react-router-dom';
 import { changeAnimation } from "../../../reduxStore/Slices/animation"
 
-
-
 const EachProduct = () => {
-  
+
+  const product = useSelector((state)=>state.eachProduct.product);
+  const { cartData }= useSelector((state)=>state.allProducts);
+  const {price,discont_price,image,title,description,id} = product;
   const dispatcher = useDispatch();
   const params = useParams();
   useEffect(()=>{dispatcher(fetchProudct(params.prod))},[]);
-
-  const product = useSelector((state)=>state.eachProduct.product);
-  const { cartData }= useSelector((state)=>state.allProducts)
- 
-  const {price,discont_price,image,title,description,id} = product;
-
-  
-
-
-
-
 
   let amount = 0;
   cartData.forEach((elem)=>{
@@ -35,12 +25,9 @@ const EachProduct = () => {
   const earned = discont_price ? discont_price - price : 0;
   const percent = discont_price ? earned / (price / 100) : 0;
 
- const adFunction = () =>{
-  dispatcher(changeAnimation())
- setTimeout(() => {
-    dispatcher(adToCart(id))
-  },500);
-}
+ const adFunction = () =>{dispatcher(changeAnimation())
+  setTimeout(() => {dispatcher(adToCart(id))},400);};
+  
  return (
     <div className='eachProduct'>
         <div className='eachPrTitle'>{title}</div>

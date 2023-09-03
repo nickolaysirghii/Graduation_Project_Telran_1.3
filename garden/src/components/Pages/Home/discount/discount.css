@@ -30,7 +30,6 @@
     font-size: 55.6px;
     font-weight: 900;
     color: #FFF;
-
 }
 .discount input{
     width: 474px;
@@ -46,7 +45,6 @@
     color: gray;
     padding-left: 50px;
     border: 1px solid white;
-    
 }
 .discount button{
     width: 474px;
@@ -61,7 +59,4 @@
     border: 3px solid #FFF;
     background: none;
     cursor: pointer;
-
-
-    
 }

@@ -10,33 +10,26 @@ const CartProduct = ({element , amount }) => {
  const { discont_price,price} = element;
  const { cartDependAnimation , cartId , cartDirection } = useSelector((state)=>state.animation)
  const dispatcher = useDispatch();
-const deleteProduct = () =>{dispatcher(deleteFromCart(element.id ))}
-const increaseProduct = () =>{dispatcher(increaseAmount(element.id))
-  dispatcher(cartAnimation({
-    state: 1,
-    id: element.id,
-    direction: "up"
-  }))
-}
-const decreaseProduct = () =>{dispatcher(decreaseAmount(element.id))
-  dispatcher(cartAnimation({
-    state: 1,
-    id: element.id,
-    direction: "down"
-  }))
-}
 
+ const deleteProduct = () =>{dispatcher(deleteFromCart(element.id ))};
+
+ const increaseProduct = () =>{dispatcher(increaseAmount(element.id));
+                               dispatcher(cartAnimation({state: 1,
+                                                         id: element.id,
+                                                         direction: "up"}));};
+const decreaseProduct = () =>{dispatcher(decreaseAmount(element.id))
+                              dispatcher(cartAnimation({state: 1,
+                                                        id: element.id,
+                                                        direction: "down"}));};
 
 if(cartDependAnimation === 1){
   const cartData = {
     state: 0,
     id: element.id,
     direction: "up"
-  }
-  setTimeout(() => {
-    dispatcher(cartAnimation(cartData))
-  }, 250);
-}
+  };
+
+  setTimeout(() => {dispatcher(cartAnimation(cartData))}, 250);};
  
   return (
     <div className='cartProduct'>

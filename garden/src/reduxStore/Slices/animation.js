@@ -1,17 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-   apear: false,
    top: 0,
    left: 0,
-   targetClasses: "",
-   cartDependAnimation: 0,
    cartId: 1,
+   cartDependAnimation: 0,
+   apear: false,
+   targetClasses: "",
    cartDirection: "up",
    productImage: "/product_img/1.jpeg"
-
 };
-
 
 export const animationSlice = createSlice({
     name: "animation",
@@ -23,8 +21,8 @@ export const animationSlice = createSlice({
         changePosition: ( state , action )=>{
             state.top = action.payload.top;
             state.left = action.payload.left;
-            state.targetClasses = action.payload.get_class
-            state.productImage = action.payload.image
+            state.targetClasses = action.payload.get_class;
+            state.productImage = action.payload.image;
         },
         cartAnimation: (state , action)=>{
             state.cartDependAnimation = action.payload.state;

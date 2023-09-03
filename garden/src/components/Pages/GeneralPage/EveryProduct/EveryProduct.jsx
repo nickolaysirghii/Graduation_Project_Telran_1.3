@@ -5,26 +5,23 @@ import { useDispatch } from 'react-redux';
 import { adToCart  } from '../../../../reduxStore/Slices/fetchProductsAll';
 import { changeAnimation } from '../../../../reduxStore/Slices/animation';
 
-
 const EveryProduct = ({elem , amount}) => {
+
     const { price,title,discont_price,image , id } = elem;
     const earned = discont_price ? discont_price - price : 0;
     const percent = discont_price ? earned / (price / 100) : 0;
     const dispatcher = useDispatch();
     
-
-    const AD_TO_CART = ()=>{
+const AD_TO_CART = ()=>{
       dispatcher(changeAnimation())
       setTimeout(() => {
         dispatcher(adToCart(elem.id))
-      }, 500);
+      }, 400);
       
     };
-    const shortedTitle = `${elem.title.slice(0,25)}...`;
+const shortedTitle = `${elem.title.slice(0,25)}...`;
 
-    
-
-    return (
+return (
         <div className='every'>
              <Link to={`/products/${id}`}>
                   <div

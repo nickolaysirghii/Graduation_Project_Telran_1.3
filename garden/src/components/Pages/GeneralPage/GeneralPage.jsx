@@ -4,8 +4,8 @@ import EveryProduct from './EveryProduct/EveryProduct';
 import { useSelector , useDispatch } from 'react-redux';
 import { saleFilter,priceFrom,priceTo,sortedBy } from '../../../reduxStore/Slices/fetchProductsAll';
 
-
 const GeneralPage = ({title , data}) => {
+
   const { FROM , TO , SortData , CheckSale , cartData } = useSelector((state)=>state.allProducts);
   const dispatcher = useDispatch();
   const data2 = [...data];
@@ -30,8 +30,7 @@ const GeneralPage = ({title , data}) => {
           const checkSale = ()=>{dispatcher(saleFilter());};
           const fromFunction = (e)=>{dispatcher(priceFrom(e.target.value))};
           const tofunction = (e)=>{dispatcher(priceTo(e.target.value))};
-           const sortedByFunction = (e)=>{dispatcher(sortedBy(e.target.value))};
-
+          const sortedByFunction = (e)=>{dispatcher(sortedBy(e.target.value))};
 
 return (
         <div className='tools'>
