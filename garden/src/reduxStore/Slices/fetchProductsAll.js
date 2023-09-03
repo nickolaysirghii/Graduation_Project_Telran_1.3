@@ -10,6 +10,7 @@ const initialState = {
     cartData: [],
     cartAmount: 0,
     sendStatus: false,
+    sendDiscountStatus: false,
     status: "nothing"
 };
 
@@ -79,6 +80,9 @@ export const productsSlice = createSlice({
         },
         returnBack: ( state ) =>{
             state.sendStatus = !state.sendStatus;
+        },
+        discountRequest: ( state ) =>{
+            state.sendDiscountStatus = !state.sendDiscountStatus
         }
     },
     extraReducers:{
@@ -99,5 +103,6 @@ export const productsSlice = createSlice({
      export const { purchase,saleFilter,priceFrom,
                     priceTo,sortedBy,adToCart,
                     deleteFromCart,increaseAmount,
+                    discountRequest,
                     decreaseAmount,returnBack } = productsSlice.actions;
      export default productsSlice.reducer;
