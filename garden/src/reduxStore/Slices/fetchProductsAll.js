@@ -1,4 +1,5 @@
 import { createSlice , createAsyncThunk } from "@reduxjs/toolkit";
+import { act } from "react-dom/test-utils";
 
 const initialState = {
     productsData: [],
@@ -9,6 +10,7 @@ const initialState = {
     productsAll: [],
     cartData: [],
     cartAmount: 0,
+    circleAmount: 0,
     sendStatus: false,
     sendDiscountStatus: false,
     status: "nothing"
@@ -50,6 +52,7 @@ export const productsSlice = createSlice({
             }});
             if(exists === false){ state.cartData.push(next) };
             state.cartAmount += 1 ;
+            state.circleAmount += 1 ;
         },
         deleteFromCart: ( state , action ) =>{
             let between = [];
@@ -60,29 +63,35 @@ export const productsSlice = createSlice({
             })
             state.cartData = between;
             state.cartAmount = state.cartAmount - cartAmountCount ;
+            state.circleAmount  = state.circleAmount - cartAmountCount;
         },
         increaseAmount: ( state , action ) =>{
             state.cartData.forEach((elem)=>{
                 if(elem.id === action.payload){ elem.amount += 1 };
             });
             state.cartAmount += 1 ;
+            state.circleAmount += 1 ;
         },
         decreaseAmount: ( state , action ) =>{
             state.cartData.forEach((elem)=>{
                 if(elem.id === action.payload){ elem.amount -= 1 };
             });
             state.cartAmount -= 1 ;
+            state.circleAmount -= 1 ;
         },
-        purchase: ( state ) =>{
-            state.sendStatus = !state.sendStatus;
+        purchase: ( state , action) =>{
+            state.sendStatus = action.payload;
             state.cartData = [];
             state.cartAmount = 0;
         },
-        returnBack: ( state ) =>{
-            state.sendStatus = !state.sendStatus;
+        returnBack: ( state , action ) =>{
+            state.sendStatus = action.payload;
         },
-        discountRequest: ( state ) =>{
-            state.sendDiscountStatus = !state.sendDiscountStatus
+        discountRequest: ( state , action ) =>{
+            state.sendDiscountStatus = action.payload
+        },
+        clearCircleAmount: ( state ) =>{
+            state.circleAmount = 0;
         }
     },
     extraReducers:{
@@ -103,6 +112,6 @@ export const productsSlice = createSlice({
      export const { purchase,saleFilter,priceFrom,
                     priceTo,sortedBy,adToCart,
                     deleteFromCart,increaseAmount,
-                    discountRequest,
+                    discountRequest,clearCircleAmount,
                     decreaseAmount,returnBack } = productsSlice.actions;
      export default productsSlice.reducer;

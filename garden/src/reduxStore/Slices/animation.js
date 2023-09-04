@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { act } from "react-dom/test-utils";
 
 const initialState = {
    top: 0,
@@ -6,6 +7,7 @@ const initialState = {
    cartId: 1,
    cartDependAnimation: 0,
    apear: false,
+   didntIntrouce: false,
    targetClasses: "",
    cartDirection: "up",
    productImage: "/product_img/1.jpeg"
@@ -15,8 +17,11 @@ export const animationSlice = createSlice({
     name: "animation",
     initialState,
     reducers: {
-        changeAnimation: (state)=>{
-            state.apear = !state.apear
+        changeAnimation: ( state , action )=>{
+            state.apear = action.payload
+        },
+        changeDidnt: ( state , action )=>{
+          state.didntIntrouce = action.payload
         },
         changePosition: ( state , action )=>{
             state.top = action.payload.top;
@@ -33,5 +38,5 @@ export const animationSlice = createSlice({
    
      })
 
-     export const { cartAnimation , changeAnimation , changePosition} = animationSlice.actions;
+     export const { changeDidnt  , cartAnimation , changeAnimation , changePosition} = animationSlice.actions;
      export default animationSlice.reducer;

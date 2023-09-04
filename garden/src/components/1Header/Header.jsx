@@ -3,15 +3,17 @@ import "./header.css";
 import bag from "../../svg/bag.svg";
 import { Link } from 'react-router-dom';
 import { useDispatch , useSelector } from "react-redux";
-import { fetchProducts } from '../../reduxStore/Slices/fetchProductsAll';
+import { fetchProducts , clearCircleAmount } from '../../reduxStore/Slices/fetchProductsAll';
 import { fetchCategoryes } from '../../reduxStore/Slices/fetchCategries';
+
 
 
 
 const Header = () => {
 
 const dispatcher = useDispatch();
-const {cartAmount} = useSelector((state)=>state.allProducts);
+const {cartAmount , circleAmount} = useSelector((state)=>state.allProducts);
+const { sendStatus  } = useSelector((state)=>state.allProducts);
 const {top, left, productImage , targetClasses , apear } = useSelector((state)=>state.animation);
 useEffect(()=>{dispatcher(fetchProducts());dispatcher(fetchCategoryes());},[]);
 
@@ -47,7 +49,15 @@ return (
            }
 
         </header>
-    </div>
+        {
+        sendStatus && <div className='fallingCircleContainer'>
+                          <div className='fallingCircle'>{circleAmount}</div>
+                     </div>
+        }
+        {
+          sendStatus && <div className='theBee'></div>
+        }
+        </div>
   )
 }
 

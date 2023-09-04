@@ -13,7 +13,7 @@ const EveryProduct = ({elem , amount}) => {
     const dispatcher = useDispatch();
     
 const AD_TO_CART = ()=>{
-      dispatcher(changeAnimation())
+      dispatcher(changeAnimation(true))
       setTimeout(() => {
         dispatcher(adToCart(elem.id))
       }, 400);

@@ -5,6 +5,7 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch , useSelector } from "react-redux";
 import { deleteFromCart,increaseAmount,decreaseAmount } from '../../../../reduxStore/Slices/fetchProductsAll';
 import { cartAnimation } from '../../../../reduxStore/Slices/animation';
+import { Link } from 'react-router-dom';
 
 const CartProduct = ({element , amount }) => {
  const { discont_price,price} = element;
@@ -30,10 +31,10 @@ if(cartDependAnimation === 1){
   };
 
   setTimeout(() => {dispatcher(cartAnimation(cartData))}, 250);};
- 
+  
   return (
     <div className='cartProduct'>
-        <div className='cartImageProduct'style={{backgroundImage:`url(http://localhost:3333/${element.image})`}}></div>
+        <Link to={`/products/${element.id}`}  className='cartImageProduct'style={{backgroundImage:`url(http://localhost:3333/${element.image})`}}></Link>
         <div className='desProCart'>{element.title}</div>
         <div className='amount'>
             <p className='decrees' onClick={decreaseProduct}>-</p>

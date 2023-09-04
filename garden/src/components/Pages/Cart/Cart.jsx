@@ -5,26 +5,33 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { useSelector , useDispatch } from "react-redux";
-import { purchase , returnBack } from '../../../reduxStore/Slices/fetchProductsAll';
+import { purchase , returnBack , clearCircleAmount } from '../../../reduxStore/Slices/fetchProductsAll';
+import { changeDidnt } from '../../../reduxStore/Slices/animation';
 import axios from 'axios';
 
 const Cart = () => {
 
   const dispatcher = useDispatch();
   const { productsAll , cartData , sendStatus  } = useSelector((state)=>state.allProducts);
+  const { didntIntrouce } = useSelector((state)=>state.animation);
   let TotalMoney = 0;
-
   const sendOdrer = (e)=>{
     e.preventDefault();
-    dispatcher(purchase());
+    if(e.target.phone1.value !== ""){
+    setTimeout(() => {dispatcher(clearCircleAmount())}, 10000);
+    dispatcher(purchase(true));
       axios.post('http://localhost:3333/order/send', {
       purchaseData: cartData,
       phone: e.target.phone1.value
     });
     e.target.reset();
+  }else{
+    dispatcher(changeDidnt(true))
+  }
   }
  
-if(sendStatus){setTimeout(() => {dispatcher(returnBack())}, 3000);};
+if(sendStatus){setTimeout(() => {dispatcher(returnBack(false));}, 10000);};
+if(didntIntrouce){ setTimeout(() => {dispatcher(changeDidnt(false))},3000);}
     
 return (
     <div className='cart'>
@@ -58,7 +65,17 @@ return (
                    </p>
                 </div>
                <input placeholder='Phone number'type='text' name='phone1' />
-               <button >{sendStatus ? "Thank You" : "Order"}</button>
+               <button >
+                  <p>{sendStatus ? "Thank You " : "Order"}</p>
+                  {
+                   sendStatus && <p className='The_Bee_message'>Wait for the bee, she is already flying to you !!!</p>
+                  }
+                  {
+                   didntIntrouce && <div className='NoData'>
+                      You forgot to enter your phone number !
+                    </div>
+                  }
+               </button>
         </form>
         <Link to="/" className='ungleCover'></Link>
     </div>

@@ -25,7 +25,7 @@ const EachProduct = () => {
   const earned = discont_price ? discont_price - price : 0;
   const percent = discont_price ? earned / (price / 100) : 0;
 
- const adFunction = () =>{dispatcher(changeAnimation())
+ const adFunction = () =>{dispatcher(changeAnimation(true))
   setTimeout(() => {dispatcher(adToCart(id))},400);};
   
  return (

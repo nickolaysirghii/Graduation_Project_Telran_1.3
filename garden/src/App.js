@@ -12,7 +12,7 @@ function App() {
   const dispatcher = useDispatch();
   const { apear } = useSelector((state)=>state.animation);
 
-  if(apear){setTimeout(() => {dispatcher(changeAnimation())}, 1000);}
+  if(apear){setTimeout(() => {dispatcher(changeAnimation(false))}, 1000);}
   
     const getEvent = (e)=>{
      const position = {
