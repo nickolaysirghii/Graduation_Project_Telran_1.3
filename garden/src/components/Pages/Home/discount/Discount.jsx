@@ -13,7 +13,7 @@ const Discount = () => {
   const sendDiscountRequest = (e)=>{
    e.preventDefault();
    if(e.target.discont.value !== "+49"){
-    axios.post('http://localhost:3333/order/send', {
+    axios.post('http://localhost:3333/sale/send', {
     title: "I want Discount",
     phone: e.target.discont.value
   });
