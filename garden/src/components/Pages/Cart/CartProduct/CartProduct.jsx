@@ -18,10 +18,13 @@ const CartProduct = ({element , amount }) => {
                                dispatcher(cartAnimation({state: 1,
                                                          id: element.id,
                                                          direction: "up"}));};
-const decreaseProduct = () =>{dispatcher(decreaseAmount(element.id))
-                              dispatcher(cartAnimation({state: 1,
-                                                        id: element.id,
-                                                        direction: "down"}));};
+const decreaseProduct = () =>{
+  if(amount > 1){
+  dispatcher(decreaseAmount(element.id))
+  dispatcher(cartAnimation({state: 1,
+                            id: element.id,
+                            direction: "down"}));};
+  }
 
 if(cartDependAnimation === 1){
   const cartData = {
