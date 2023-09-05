@@ -68,7 +68,7 @@ return (
                <button >
                   <p>{sendStatus ? "Thank You " : "Order"}</p>
                   {
-                   sendStatus && <p className='The_Bee_message'>Wait for the bee, she is already flying to you !!!</p>
+                   sendStatus && <p className='The_Bee_message'>Wait for the bee, she is already flying to you !!! BZZZZ_zzzzZZZ!!!</p>
                   }
                   {
                    didntIntrouce && <div className='NoData'>
@@ -78,6 +78,7 @@ return (
                </button>
         </form>
         <Link to="/" className='ungleCover'></Link>
+        
     </div>
   )
 }

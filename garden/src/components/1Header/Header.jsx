@@ -3,7 +3,7 @@ import "./header.css";
 import bag from "../../svg/bag.svg";
 import { Link } from 'react-router-dom';
 import { useDispatch , useSelector } from "react-redux";
-import { fetchProducts , clearCircleAmount } from '../../reduxStore/Slices/fetchProductsAll';
+import { fetchProducts } from '../../reduxStore/Slices/fetchProductsAll';
 import { fetchCategoryes } from '../../reduxStore/Slices/fetchCategries';
 
 
@@ -55,7 +55,17 @@ return (
                      </div>
         }
         {
-          sendStatus && <div className='theBee'></div>
+          sendStatus && <div className='theBee'>
+            <div className='bzzCover'></div>
+            <div className='The_bee'>
+           <div className='DownPart'></div>
+           <div className='head'></div>
+           <div className='backHead'></div>
+           <div className='beeBack'></div>
+           <div className='leftWing'></div>
+           <div className='rihtWing'></div>
+        </div>
+          </div>
         }
         </div>
   )

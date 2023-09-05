@@ -11,6 +11,7 @@ function App() {
 
   const dispatcher = useDispatch();
   const { apear } = useSelector((state)=>state.animation);
+  const { sendStatus  } = useSelector((state)=>state.allProducts);
 
   if(apear){setTimeout(() => {dispatcher(changeAnimation(false))}, 1000);}
   
@@ -26,7 +27,9 @@ function App() {
     
   return (
     <div className="App" onClick={getEvent} >
-      <div className='container' >
+      <div className='container' style={ sendStatus ? { width: "100vw",
+                                                        height: "100vh",
+                                                        overflow: "hidden"} : {}} >
             <div className='wraper'>
               <Header className='headerFixed'/>
            </div>
