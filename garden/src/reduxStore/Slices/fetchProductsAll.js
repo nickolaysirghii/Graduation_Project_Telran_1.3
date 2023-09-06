@@ -46,6 +46,7 @@ export const productsSlice = createSlice({
         adToCart: ( state ,action ) =>{
             const next = { id: action.payload, amount: 1 }
             let exists = false;
+
             state.cartData.forEach((elem)=>{
             if(elem.id === action.payload){
                elem.amount += 1 ; exists = true ;
