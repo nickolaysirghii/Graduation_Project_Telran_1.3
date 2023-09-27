@@ -20,6 +20,7 @@ const Discount = () => {
   dispatcher(discountRequest(true));
    e.target.reset();
   }else{
+    
     dispatcher(changeDidnt(true))
   }
   }

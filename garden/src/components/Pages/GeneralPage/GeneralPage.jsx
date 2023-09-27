@@ -20,9 +20,9 @@ const GeneralPage = ({title , data}) => {
   if(SortData === "default"){
     sortedArray = saleArray;
   }else if(SortData === "first"){
-    sortedArray = saleArray.sort((a,b)=>a.price - b.price);
+    sortedArray = saleArray.sort((a,b)=>(a.discont_price ? a.discont_price : a.price) - b.price);
   }else if(SortData === "second"){
-    sortedArray = saleArray.sort((a,b)=>b.price - a.price);
+    sortedArray = saleArray.sort((a,b)=>b.price - (a.discont_price ? a.discont_price : a.price));
   }else if(SortData === "text"){
     sortedArray = saleArray.sort((a,b)=>a.title.localeCompare(b.title))
   }
