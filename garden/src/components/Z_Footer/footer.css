@@ -1,92 +1,117 @@
-.footer{
-    width: 1440px;
-    height: 933px;
-    padding: 42px 32px 610px 29px;
+.footerContainer{
+    padding: 3vw;
+    background-color: rgb(240, 239, 239);
 }
-.footerInfo{
-    width: 1375px;
-    height: 278px;
-    position: relative;
+.mobfooterContainer{
+    padding: 6vw;
+    background-color: rgb(240, 239, 239);
 }
-.contact{
-    position: absolute;
-    font-size: 42px;
-    font-weight: bolder;
-    top: 0;
+.footerContainer h2{
+    font-size: 2.5vw;
 }
-.addres{
-    position: absolute;
-    right: 391px;
-    font-size: 42px;
+.mobfooterContainer h2{
+    font-size: 7.5vw;
 }
-.telephone{
-    position: absolute;
-    font-size: 72px;
+.footerContainer h2 span{
+    margin-left: 39vw;
+}
+.mobfooterContainer h2 span{
+    margin-left: 19vw;
+}
+.footerPhone{
+    margin-top: 1.4vw;
+    font-size: 4.4vw;
+    display: flex;
+}
+.mobfooterPhone{
+    margin-top: 1.4vw;
+    font-size: 7.4vw;
+    display: flex;
+}
+.footerPhone a{
+    margin-left: 9.6vw;
+    font-size: 2.56vw;
     font-weight: 900;
-    top: 78px;
-}
-.strasse{
-    position: absolute;
-    font-size: 41.5px;
-    font-weight: 700;
-    top: 76px;
-    right: 42px;
+    display: inline-block;
     color: black;
 }
-.hours{
-    position: absolute;
-    font-size: 18px;
-    font-weight: 800;
-    bottom: 50px;
-    right: 421px;
-}
-.a_day{
-    position: absolute;
-    font-size: 25px;
+.mobfooterPhone a{
+    margin-left: 9.6vw;
+    font-size: 6.56vw;
     font-weight: 900;
-    bottom: 17px;
-    right: 381px;
+    display: inline-block;
+    color: black;
 }
-.whatsUpCont{
-    width: 100px;
-    height: 78px;
-    position: absolute;
-    bottom: 0;
-    left: 105px;
+.footerWhatsUp{
     display: flex;
+    margin-top: 1vw;
+}
+.mobfooterWhatsUp{
+    display: flex;
+    margin-top: 1vw;
+}
+.social{
+    display: flex;
+    gap: 0.3vw;
     flex-direction: column;
     align-items: center;
-    font-size: 16px;
-    font-weight: 600;
-    justify-content: space-between;
-    text-decoration: none;
-    color: black;
-    
-}
-.whatsUpCont img{
+    font-size: 0.95vw;
+    margin-right: 2vw;
+    font-weight: 900;
     cursor: pointer;
-}
-.instaCont{
-    width: 87px;
-    height: 78px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 800;
-    justify-content: space-between;
     text-decoration: none;
     color: black;
 }
-.instaCont img{
+.mobsocial{
+    display: flex;
+    gap: 0.3vw;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.95vw;
+    margin-right: 5vw;
+    font-weight: 900;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
-.googleMap{
-    width: 1345px;
-    height: 525px;
-    margin-top: 40px;
+.social img{
+    height: 3vw;
+}
+.mobsocial img{
+    height: 15vw;
+}
+.footerHours{
+    margin:0.2vw 0 0 36vw;
+}
+.mobfooterHours{
+    margin:3.2vw 0 0 7vw;
+}
+.footerHours p{
+    font-weight: 900;
+    font-size: 1.14vw;
+}
+.mobfooterHours p{
+    font-weight: 900;
+    font-size: 5.14vw;
+}
+.footerHours h4{
+    font-size: 1.55vw;
+}
+.mobfooterHours h4{
+    font-size: 4.55vw;
+}
+.footerMap{
+    margin-top: 2.4vw;
+    height: 32.4vw;
     background-image: url(../../../public/images/googleMap.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.mobfooterMap{
+    margin-top: 2.4vw;
+    height: 32.4vw;
+    padding: 40vw;
+    background-image: url(../../../public/images/mobgoogleMap.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }

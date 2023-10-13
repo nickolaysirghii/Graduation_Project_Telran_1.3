@@ -27,9 +27,7 @@ function App() {
     
   return (
     <div className="App" onClick={getEvent} >
-      <div className='container' style={ sendStatus ? { width: "100vw",
-                                                        height: "100vh",
-                                                        overflow: "hidden"} : {}} >
+      <div className='container' >
             <div className='wraper'>
               <Header className='headerFixed'/>
            </div>

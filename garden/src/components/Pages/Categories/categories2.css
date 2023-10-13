@@ -1,0 +1,46 @@
+.EvCatCon{
+    text-decoration: none;
+    color: black;
+}
+.CategoriesTitle{
+    font-size: 2.7vw;
+    padding: 2.3vw 73vw 3vw 2vw;
+}
+.mobCategoriesTitle{
+    font-size: 5.7vw;
+    padding: 5.3vw 59vw 3vw 2vw;
+}
+.CategoriesElements{
+    padding: 2vw;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2vw;
+}
+.mobCategoriesElements{
+    padding: 2vw;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2vw;
+}
+.evCatImage{
+    padding: 11vw 5vw;
+    background-size: cover;
+}
+.mobevCatImage{
+    padding: 21vw 15vw;
+    background-size: cover;
+}
+.EvCatTitle{
+    padding: 1.3vw 2vw 0 2vw;
+    max-width: 20vw;
+    font-size: 1.2vw;
+    font-weight: 900; 
+    text-align: center;
+}
+.mobEvCatTitle{
+    padding: 1.3vw 2vw 0 2vw;
+    max-width: 45vw;
+    font-size: 3.2vw;
+    font-weight: 900; 
+    text-align: center;
+}

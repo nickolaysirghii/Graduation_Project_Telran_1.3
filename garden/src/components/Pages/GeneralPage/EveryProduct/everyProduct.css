@@ -110,7 +110,7 @@
     cursor: pointer;
     z-index: 9;
 }
-.every:hover .NewButton{
+.every:hover .NewButton {
    visibility: visible;
 }
 .DoAnimation{

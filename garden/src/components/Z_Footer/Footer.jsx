@@ -4,26 +4,28 @@ import whatsUp from "../../svg/watsUp.svg";
 import instagram from "../../svg/instagram.svg"
 
 const Footer = () => {
-  
+//   const mob = window.innerWidth > 800 ? "" : "mob";
+const mob = "mob"
   return (
-    <div className='footer'>
-        <div className='footerInfo'>
-            <h2 className='contact'>Contact</h2>
-            <h2 className='addres'>Address</h2>
-            <p className='telephone'>+49 999 999 99 99</p>
-            <a href='https://tel-ran.de/' className='strasse' target='_blank'>Linkstraße 2, 8 OG, 10785,<br></br> Berlin, Deutschland</a>
-            <p className='hours'>Working Hours:</p>
-            <p className='a_day'>24 hours a day</p>
-            <a href='https://en.wikipedia.org/wiki/WhatsApp' target='_blank' className='whatsUpCont'>
-            <img src={whatsUp} alt='WhatsUp' />
-            <p>WhatsApp</p>
-            </a>
-            <a href='https://pl.wikipedia.org/wiki/Instagram' target='_blank' className='instaCont'>
-            <img src={instagram} alt='insta' />
-            <p>Instagram</p>
-            </a>
+    <div className={`${mob}footerContainer`}>
+     <h2>Contact<span>Address</span></h2>
+     <div className={`${mob}footerPhone`}><p>+49 999 999 99 99</p><span>
+      <a href='https://tel-ran.de/' target='_blank'>Linkstraße 2, 8 OG, 10785,<br/> Berlin, Deutschland</a></span></div>
+     <div className={`${mob}footerWhatsUp`}>
+        <a href='https://play.google.com/store/apps/details?id=com.instagram.android&hl=ro&gl=US' target='_blank' className={`${mob}social`}>
+           <img src={instagram} alt='insta' />
+           <p>Instagram</p>
+        </a>
+        <a href='https://www.whatsapp.com/' target='_blank' className={`${mob}social`}>
+           <img src={whatsUp} alt='insta' />
+           <p>WhatsApp</p>
+        </a>
+        <div className={`${mob}footerHours`}>
+            <p>Working Hours:</p>
+            <h4>24 hours a day</h4>
         </div>
-        <div className='googleMap'></div>
+     </div>
+     <div className={`${mob}footerMap`}></div>
     </div>
   )
 }
