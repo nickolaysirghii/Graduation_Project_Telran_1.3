@@ -1,7 +1,7 @@
 import { createSlice , createAsyncThunk } from "@reduxjs/toolkit";
-import { act } from "react-dom/test-utils";
 
 const initialState = {
+    mob: "mob",
     productsData: [],
     CheckSale: false,
     SortData: "default",

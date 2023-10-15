@@ -1,0 +1,194 @@
+.EveryGenContainer{
+position: relative;
+}
+.mobEveryGenContainer{
+  position: relative;  
+}
+.EveryGenImage{
+    padding: 9vw 5vw;
+    background-size: cover;
+    
+
+}
+.mobEveryGenImage{
+    padding: 19vw 5vw;
+    background-size: cover;
+}
+.generalPriceInfo{
+    padding: 1vw 3vw 0 1vw ;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+}
+.mobgeneralPriceInfo{
+    padding: 1vw 3vw 0 1vw ;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+}
+.GeneralDiscont{
+    font-size: 2vw;
+    font-weight: 900;
+}
+.mobGeneralDiscont{
+    font-size: 5vw;
+    font-weight: 900;
+}
+.GeneralPrice{
+    color: rgb(166, 163, 163);
+    font-size: 1.4vw;
+    font-weight: 900;
+
+}
+.mobGeneralPrice{
+    color: rgb(166, 163, 163);
+    font-size: 3.4vw;
+    font-weight: 900;
+
+}
+.GeneralPercent{
+    color: #FF32A1;
+    font-size: 1.3vw;
+    font-weight: 900;
+}
+.mobGeneralPercent{
+    color: #FF32A1;
+    font-size: 3.3vw;
+    font-weight: 900;
+}
+.ElementGenTitle{
+    color: rgb(88, 86, 86);
+    font-size: 1.1vw;
+    font-weight: 900;
+    padding: 0.6vw 1.1vw;
+    display: flex;
+    align-items: center;
+}
+.mobElementGenTitle{
+    color: rgb(88, 86, 86);
+    font-size: 2.1vw;
+    font-weight: 900;
+    padding: 0.6vw 1.1vw;
+    display: flex;
+    align-items: center;
+}
+.AddButton{
+    width: 86%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border: 3px solid #393;
+    color: #393;
+    background-color: #F1FFF1;
+    cursor: pointer;
+    font-size: 1.2vw;
+    font-weight: 900;
+    border-radius: 20px;
+    top: 50%;
+    left: 6%;
+    visibility: hidden;
+}
+.mobAddButton{
+    width: 86%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border: 3px solid #393;
+    color: #393;
+    background-color: #F1FFF1;
+    font-size: 3.2vw;
+    font-weight: 900;
+    border-radius: 20px;
+    top: 50%;
+    left: 6%;
+    opacity: 0.6;
+}
+.EveryGenContainer:hover .AddButton{
+    visibility: visible;
+}
+.mobEveryGenImage:hover.mobAddButton{
+    opacity: 1;
+}
+
+
+.showNewButton {
+    padding: 1.4vw 4.1vw 1.4vw 4.1vw;
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    border-radius: 20px;
+    font-size: 1.3vw;
+    font-weight: 700;
+    color: #393;
+    border: 3px solid #393;
+    background: #F1FFF1;
+    cursor: pointer;
+
+
+}
+.mobshowNewButton {
+    padding: 2.4vw 4.1vw 2.4vw 4.1vw;
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    border-radius: 20px;
+    font-size: 4.3vw;
+    font-weight: 700;
+    color: #393;
+    border: 3px solid #393;
+    background: #F1FFF1;
+    cursor: pointer;
+    opacity: 0.7;
+
+
+}
+.productsExist{
+   height: 2vw;
+   width: 2vw;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #FF32A1;
+    top: 0;
+    right: 0;
+    color: white;
+    font-size: 1.3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mobproductsExist{
+    height: 4vw;
+    width: 4vw;
+     border-radius: 50%;
+     position: absolute;
+     background-color: #FF32A1;
+     top: 0;
+     right: 0;
+     color: white;
+     font-size: 3.3vw;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+.productsDontExist{
+    height: 2vw;
+    width: 2vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    background-color: #FF32A1;
+    color: #F1FFF1;
+    font-size: 1.3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+
+}

@@ -1,0 +1,21 @@
+
+.mobrandomeSaleContainer{
+   margin-top: 3.2vw;
+}
+.RandomeTitle{
+    margin: 3vw 82vw 1.3vw 2vw;
+    font-size: 2.6vw;
+    font-weight: 900;
+}
+.mobRandomeTitle{
+    margin: 3vw 75vw 1.3vw 2vw;
+    font-size: 5.8vw;
+    font-weight: 900;
+}
+.RandomeElements{
+    display: flex;
+}
+.mobRandomeElements{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}

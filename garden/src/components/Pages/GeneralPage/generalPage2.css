@@ -1,0 +1,120 @@
+.generalPageContainer{
+    margin-top: 10vw;
+}
+.mobgeneralPageContainer{
+    margin-top: 15vw;
+}
+.generalPageContainer h2{
+    font-size: 2.7vw;
+    padding: 2vw 71vw 4.8vw 2vw;
+}
+.mobgeneralPageContainer h2{
+    font-size: 5.7vw;
+    padding: 2vw 52vw 4.8vw 2vw;
+}
+.toolbars{
+    display: flex;
+    align-items: center;
+}
+.toolbars > div{
+    display: flex;
+    align-items: center;
+}
+.mobtoolbars > div{
+    display: flex;
+    align-items: center;
+
+}
+.mobtoolbars{
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+}
+.toolbarPrice{
+    margin: 0 1vw 0 2vw;
+    font-size: 1.3vw;
+    font-weight: 900;
+}
+.mobtoolbarPrice{
+    margin: 0 1vw 0 1vw;
+    font-size: 4.3vw;
+    font-weight: 900;
+}
+.toolbarFrom{
+    width: 6.4vw;
+    margin-right: 1vw;
+    padding-left: 0.5vw;
+    height: 2.7vw;
+    border-radius: 10px;
+    font-size: 1vw;
+    font-weight: 900;
+    color: grey;
+    border: 1px solid gray;
+}
+.mobtoolbarFrom{
+    width: 20.4vw;
+    margin-right: 4vw;
+    padding-left: 2vw;
+    height: 7.7vw;
+    border-radius: 10px;
+    font-size: 4vw;
+    font-weight: 900;
+    color: grey;
+    border: 1px solid gray;
+}
+.toolbarDiscount{
+    padding: 0 2.3vw 0 1vw;
+    font-size: 1.4vw;
+    font-weight: 900;
+}
+.mobtoolbarDiscount{
+    padding: 0 11.3vw 0 1vw;
+    font-size: 4.4vw;
+    font-weight: 900;
+}
+.checkbox{
+    height: 2.5vw;
+    width: 2.5vw;
+}
+.mobcheckbox{
+    height: 6.5vw;
+    width: 6.5vw;
+}
+.toolbarSorted{
+    padding: 0 2.4vw 0 5.4vw;
+    font-size: 1.4vw;
+    font-weight: 900;
+}
+.mobtoolbarSorted{
+    padding: 0 2.4vw 0 1vw;
+    font-size: 4.4vw;
+    font-weight: 900;
+}
+.toolsSelect{
+    padding: 0.5vw 6vw 0.5vw 0.6vw;
+    border-radius: 10px;
+    color:  grey;
+    font-size: 1.1vw;
+    font-weight: 900;
+    
+}
+.mobtoolsSelect{
+    padding: 2vw 19vw 2vw 0.6vw;
+    border-radius: 10px;
+    color:  grey;
+    font-size: 3.1vw;
+    font-weight: 900;
+    
+}
+.GeneralElements{
+    padding: 2vw;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2vw;
+}
+.mobGeneralElements{
+    padding: 2vw;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2vw;
+}

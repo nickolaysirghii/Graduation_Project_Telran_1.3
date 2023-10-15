@@ -2,10 +2,10 @@ import React from 'react';
 import "./footer.css"
 import whatsUp from "../../svg/watsUp.svg";
 import instagram from "../../svg/instagram.svg"
+import { useSelector } from 'react-redux';
 
 const Footer = () => {
-//   const mob = window.innerWidth > 800 ? "" : "mob";
-const mob = "mob"
+   const { mob } = useSelector((state)=>state.allProducts);
   return (
     <div className={`${mob}footerContainer`}>
      <h2>Contact<span>Address</span></h2>

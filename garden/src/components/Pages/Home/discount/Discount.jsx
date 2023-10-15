@@ -1,5 +1,5 @@
 import React from 'react';
-import "./discount.css";
+import "./getSale.css";
 import axios from "axios"
 import { useSelector , useDispatch } from 'react-redux';
 import { discountRequest } from '../../../../reduxStore/Slices/fetchProductsAll';
@@ -30,24 +30,26 @@ const Discount = () => {
     dispatcher(changeDidnt(false))
   }, 3000);}
 
+  const { mob } = useSelector((state)=>state.allProducts);
+
   return (
-    <div className='discount'>
-        <div className='elf'></div>
-        <strong>5% off</strong>
-        <p>on the first order</p>
-        <form  onSubmit={sendDiscountRequest}>
-            <input type='text' defaultValue="+49" name='discont'/>
-            <button>
-              {
+    <div className={`${mob}getSaleContainer`}>
+    <div className={`${mob}hobit`}></div>
+    <form onSubmit={sendDiscountRequest} className={`${mob}getSaleInfo`}>
+      <p className={`${mob}off`}>5% off</p>
+      <p className={`${mob}belowOff`}>on the first order</p>
+      <input type='text'defaultValue='+49' name='discont'/><br/>
+      <button>
+               {
                 sendDiscountStatus ? "Thank you , the request was sended !" : "Get a discount"
-              }
-              {
-                 didntIntrouce && <div className='warning'>
-                  You forgot to enter your phone number !
-                </div>
-              }
-            </button>
-        </form>
+               }
+               {
+                  didntIntrouce && <div className='warning'>
+                   You forgot to enter your phone number !
+                 </div>
+               }
+      </button>
+    </form>
     </div>
   )
 }

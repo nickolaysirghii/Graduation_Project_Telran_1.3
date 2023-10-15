@@ -14,7 +14,7 @@
     height: 14.4vw;
     display: flex;
     align-items: center;
-    padding: 0 2vw 0 2vw;
+    padding: 0 6vw;
     background: linear-gradient(  white 85% , transparent);
     position: fixed;
     top: 0;
@@ -54,6 +54,7 @@
     border-radius: 7px;
     background-color: #393;
     cursor: pointer;
+    text-decoration: none;
 
 }
 .mobHeaderCatalog{
@@ -67,6 +68,7 @@
     color: white;
     font-size: 2vw;
     background-color: #393;
+    text-decoration: none;
 }
 .Ankers{
     margin-top: 1.5vw;
@@ -74,12 +76,15 @@
     display: flex;
     justify-content: space-between;
     color: black;
+    
 }
 .Ankers a{
     font-size: 1vw;
     font-weight: 900;
     margin-left: 3vw;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 .mobAnkers{
     position: absolute;
@@ -90,6 +95,7 @@
     justify-content: space-between;
     color: black;
     border: 1px solid ;
+    
 }
 .Bag{
     height: 2vw;
@@ -115,13 +121,14 @@
     left: -120%;
     transition: all 0.5s;
     opacity: 0;
+
 }
 .ShowHeaderBarContainer{
     width: 90vw;
     height: 90vh;
     position: absolute;
     top: 14vw;
-    left: 0vw;
+    left: 2vw;
     transition: all 0.5s;
 }
 .BarElement{
@@ -140,7 +147,7 @@
     padding: 4vw 4vw;
     position: absolute;
     top: 3vw;
-    left: 1vw;
+    left: 5vw;
 }
 .classCover{
     position: absolute;
@@ -148,15 +155,15 @@
 }
 .cartAmount{
     position: absolute;
-    width: 20px;
-    height: 20px;
-    right: 20px;
-    top: 35px;
-    border-radius: 50px;
+    width: 1.5vw;
+    height: 1.5vw;
+    top: 2vw;
+    right:1.1vw;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 1.2vw;
     background-color: #FF32A1;
     color: #FFF;
 }
@@ -164,7 +171,7 @@
     position: absolute;
     width: 5vw;
     height: 5vw;
-    right: 1vw;
+    right: 3.9vw;
     top: 3vw;
     border-radius: 50%;
     display: flex;
@@ -195,7 +202,7 @@
     align-items: center;
     justify-content: center;
     top: 1.5vw;
-    right:-0.5vw;
+    right:2.5vw;
 }
 .swallow div{
     background-color: #FF32A1;
@@ -291,10 +298,10 @@
     background-size: contain;
     animation: animateCircke 0.5s forwards;
     animation-timing-function: cubic-bezier(.63,.26,.9,.49);
-    height: 300px;
-    width: 300px;
-    background-size: contain;
-    background-repeat: no-repeat;
+    height: 10vw;
+    width: 10vw;
+    background-size: cover;
+
     background-color: white    
 }
 .mobanimationElem{
@@ -302,8 +309,8 @@
     background-size: contain;
     animation: mobanimateCircke 0.5s forwards;
     animation-timing-function: cubic-bezier(.63,.26,.9,.49);
-    height: 300px;
-    width: 300px;
+    height: 10vw;
+    width: 10vw;
     background-size: contain;
     background-repeat: no-repeat;
     background-color: white    

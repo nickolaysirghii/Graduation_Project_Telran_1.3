@@ -13,14 +13,12 @@ import HeaderBar from './HeaderBar';
 
 const Header = () => {
 const dispatcher = useDispatch();
-const {cartAmount , circleAmount} = useSelector((state)=>state.allProducts);
+const {cartAmount , circleAmount , mob} = useSelector((state)=>state.allProducts);
 const { sendStatus  } = useSelector((state)=>state.allProducts);
 const {top, left, productImage , targetClasses , apear } = useSelector((state)=>state.animation);
 useEffect(()=>{dispatcher(fetchProducts());dispatcher(fetchCategoryes());},[]);
 
 //==================================================================
-  // const mob = window.innerWidth > 800 ? "" : "mob";
-  const mob = "mob"
 
   const [BarrClass , setBarrClass] = useState('HidenHeaderBarContainer')
   const barFunction = ()=>{
@@ -53,11 +51,14 @@ useEffect(()=>{dispatcher(fetchProducts());dispatcher(fetchCategoryes());},[]);
                   {
                 ( targetClasses === "NewButton" ||
                   targetClasses === "toCart"    ||
+                  targetClasses === "AddButton" ||
+                  targetClasses === "mobAddButton" ||
+                  targetClasses === "mobshowNewButton" ||
                   targetClasses === "showNewButton" ) && apear && 
-                  <div style={{top:`${targetClasses    === "toCart" ? (top -17) : top}px`,
+                  <div style={{top:`${targetClasses    === "toCart" ? (top -5) : top}px`,
                                left:`${targetClasses   === "toCart" ? (left +15) : left}px`,
-                               width:`${targetClasses  === "toCart" ? "710" : 300}px`,
-                               height:`${targetClasses === "toCart" ? "710" : 300}px`,
+                               width:`${targetClasses  === "toCart" ? "680" : 300}px`,
+                               height:`${targetClasses === "toCart" ? "680" :300}px`,
                                backgroundImage: `url(http://localhost:3333${productImage})`,
                                backgroundSize: "contain",                              backgroundRepeat: "no-repeat"}}
                       className='animationElem'></div>

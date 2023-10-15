@@ -1,26 +1,29 @@
 import React from 'react';
 import "./catalog.css";
-import { Link } from 'react-router-dom';
-import CatalogIndex from './caalogIndex/CatalogIndex';
+import CatElems from "./CatalogElements/CatElems";
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 
 const Catalog = () => {
 
 const { categoryesAll } = useSelector((state)=>state.allcategoryes);
+const { mob } = useSelector((state)=>state.allProducts);
+const four = categoryesAll.slice(0, 4)
 
 return (
-    <div className='catalog'>
-        <h2 className='catalogTitle'>Catalog</h2>
-        <Link to="/categories"><button>All categories</button></Link>
-        <div className='catalogContainer'>
-         {
-          categoryesAll.map((elem,idx)=>{
-            return <CatalogIndex key={idx} elem={elem}></CatalogIndex>
-          })
-         }
-        </div>
-    </div>
-  )
+  <div className={`${mob}catalogContainer`}>
+   <div className={`${mob}catologTitle`}>
+    <p>Catalog</p>
+    <a href='/categories'><button>All categories</button></a>
+   </div>
+   <div className={`${mob}catalogElementsContainer`}>
+   {
+    four.map((elem,idx)=>{
+      return <CatElems key={idx} data={elem} />
+    })
+   }
+   </div>
+  </div>
+)
 }
 
 export default Catalog

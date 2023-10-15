@@ -1,46 +1,75 @@
-.sales{
-    width: 1440px;
-    height: 600px;
-    margin-top: 45px;
+.saleContainer{
+    padding: 0.2vw 58vw 8.5vw 0;
+    background-color: #A1E2EB;
+    background-size: contain;
     position: relative;
-    background-color:  #A1E2EB;
 }
-.title{
+.mobsaleContainer{
+    margin-top: 14.5vw;
+    padding: 0.1vw 48vw 14vw 0;
+    background-color: #A1E2EB;
+    background-size: contain;
+    position: relative;
+}
+.NewSaleBush{
+    background-image: url(../../../../../public/images/bush.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 42vw;
+    width: 40vw;
     position: absolute;
-    color: #FFF;
-    font-size: 80px;
-    letter-spacing: 2px;
+    top: -4vw;
+    right: -0.2vw;
+}
+.mobNewSaleBush{
+    background-image: url(../../../../../public/images/bush.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 62vw;
+    width: 60vw;
+    position: absolute;
+    top: -7vw;
+    right: -1.6vw;
+}
+.NewSaleTitle span{
+    font-size: 5vw;
     font-weight: 900;
-    top: 132px;
-    left: 50px;
 }
-.season{
-    position: absolute;
-    color: #FFF;
-    font-size: 62.7px;
-    letter-spacing: 2px;
+.mobNewSaleTitle span{
+    font-size: 10vw;
     font-weight: 900;
-    top: 240px;
-    left: 50px;
 }
-.sales button{
-    width: 155px;
-    height: 85px;
-    position: absolute;
-    border-radius: 10px;
-    bottom: 136px;
-    left: 50px;
-    font-size: 28px;
-    font-weight: 600;
+.NewSaleTitle{
+    color: white;
+    font-size: 4.2vw;
+    margin:8.3vw 3vw 4vw;
+    font-weight: 800;
+}
+.mobNewSaleTitle{
+    color: white;
+    font-size: 5.9vw;
+    margin:8.3vw 3vw 4vw;
+    font-weight: 800;
+}
+.saleContainer button{
+    margin-left: 3vw;
+    height: 5vw;
+    width: 10vw;
     border: none;
-    background-color: #FFF;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 1.6vw;
+    font-weight: 900;
     cursor: pointer;
 }
-.bush{
-    width: 640px;
-    height: 660px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    background-image: url(../../../../../public/images/bush.png);
+.mobsaleContainer button{
+    margin-left: 3vw;
+    height: 10vw;
+    width: 27vw;
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 3.6vw;
+    font-weight: 900;
+    cursor: pointer;
 }

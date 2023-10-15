@@ -6,9 +6,7 @@ import { useSelector} from "react-redux";
 const Categories = () => {
   
   const { categoryesAll } = useSelector((state)=>state.allcategoryes);
-
-  // const mob = window.innerWidth > 800 ? "" : "mob";
-  const mob = "mob"
+  const {mob} = useSelector((state)=>state.allProducts);
   return (
     <div>
     <h2 className={`${mob}CategoriesTitle`}>Categories</h2>

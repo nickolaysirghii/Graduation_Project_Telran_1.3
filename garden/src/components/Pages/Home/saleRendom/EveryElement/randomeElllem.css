@@ -1,0 +1,78 @@
+.rrCont{
+    margin: 0 0.6vw 0 2.2vw;
+    display: flex;
+    flex-direction: column;
+}
+.mobrrCont{
+    margin: 0 0.6vw 0 2.2vw;
+    display: flex;
+    flex-direction: column;
+}
+.randomeImage{
+    padding: 8.5vw 9.4vw;
+    background-color: aqua;
+    cursor: pointer;
+}
+.mobrandomeImage{
+    padding: 16.5vw 9.4vw;
+    background-color: aqua;
+    cursor: pointer;
+}
+.priceInfo{
+    padding: 1vw 2vw 0.7vw 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mobpriceInfo{
+    padding: 1vw 2vw 0.7vw 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.DiscontPrice{
+    font-size: 2vw;
+    font-weight: 900;
+}
+.mobDiscontPrice{
+    font-size: 5vw;
+    font-weight: 900;
+}
+.price{
+    font-size: 1.3vw;
+    font-weight: 800;
+    color: grey;
+    
+}
+.mobprice{
+    font-size: 3.3vw;
+    font-weight: 800;
+    color: grey;
+    
+}
+
+.DiscontPercent{
+    font-size: 1.3vw;
+    font-weight: 900;
+    color: #FF32A1;
+}
+.mobDiscontPercent{
+    font-size: 2.3vw;
+    font-weight: 900;
+    color: #FF32A1;
+}
+.randomeElemTitle{
+    font-size: 1vw;
+    padding-bottom: 2.7vw;
+    letter-spacing: 0.03vw;
+    font-weight: 900;
+    margin-left: 1vw;
+}
+.mobrandomeElemTitle{
+    font-size: 2vw;
+    max-width: 45vw;
+    padding-bottom: 2.7vw;
+    letter-spacing: 0.03vw;
+    font-weight: 900;
+    margin-left: 1vw;
+}

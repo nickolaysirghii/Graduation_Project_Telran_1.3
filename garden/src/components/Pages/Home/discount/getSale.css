@@ -1,0 +1,116 @@
+.getSaleContainer{
+    padding: 0 11vw 1vw 0;
+    background: linear-gradient(263deg, #393 -0.43%, #006300 104.36%);
+    display: flex;
+    color: white;
+}
+.mobgetSaleContainer{
+    margin-top: 7.4vw;
+    background: linear-gradient(263deg, #393 -0.43%, #006300 104.36%);
+    display: flex;
+    color: white;
+}
+.hobit{
+    max-width: 30vw;
+    padding: 13vw 13vw;
+    margin: 1.5vw 0 0 5.5vw;
+    background-image: url(../../../../../public/images/elf.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.mobhobit{
+    max-width: 60vw;
+    padding: 23vw 23vw;
+    background-image: url(../../../../../public/images/elf.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.getSaleInfo{
+    padding: 2.7vw 5vw 2vw 12.5vw;
+}
+.mobgetSaleInfo{
+    padding: 2.7vw 0 2vw 0;
+}
+.off{
+    font-size: 5.5vw;
+    font-weight: 900;
+    letter-spacing: 0.6vw;
+}
+.moboff{
+    font-size: 10.5vw;
+    font-weight: 900;
+    letter-spacing: 0.6vw;
+}
+.belowOff{
+    font-size: 3.5vw;
+    font-weight: 900;
+    line-height: 2vw;
+}
+.mobbelowOff{
+    font-size: 4.5vw;
+    font-weight: 900;
+    line-height: 2vw;
+}
+.getSaleInfo input{
+    margin-top: 4vw;
+    color: grey;
+    border: none;
+    min-width: 29.3vw;
+    padding: 1.5vw 0 1.5vw 3vw ;
+    border-radius: 20px;
+    font-size: 1.3vw;
+    font-weight: 900;
+
+}
+.mobgetSaleInfo input{
+    margin-top: 4vw;
+    color: grey;
+    border: none;
+    min-width: 39.3vw;
+    padding: 2.5vw 0 2.5vw 3vw ;
+    border-radius: 20px;
+    font-size: 2.3vw;
+    font-weight: 900;
+
+}
+.getSaleInfo button{
+    margin-top: 2.2vw;
+    border: 2px solid white;
+    color: white;
+    font-size: 2vw;
+    font-weight: 900;
+    background-color: transparent;
+    border-radius: 20px;
+    width: 29.3vw;
+    height: 5vw;
+    cursor: pointer;
+    position: relative;
+}
+.mobgetSaleInfo button{
+    margin-top: 5.2vw;
+    border: 2px solid white;
+    color: white;
+    font-size: 3.6vw;
+    font-weight: 900;
+    background-color: transparent;
+    border-radius: 20px;
+    min-width: 39.3vw;
+    height: 8vw;
+    margin-right: 4vw;
+    cursor: pointer;
+    position: relative;
+}
+.warning{
+    width: 100%;
+    height: 100%;
+    background-color:#006300 ;
+    border-radius: 25px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3vw;
+}
