@@ -10,12 +10,13 @@
 }
 .randomeImage{
     padding: 8.5vw 9.4vw;
-    background-color: aqua;
+    background-size: contain;
+    background-repeat: no-repeat;
     cursor: pointer;
 }
 .mobrandomeImage{
     padding: 16.5vw 9.4vw;
-    background-color: aqua;
+    background-size: cover;
     cursor: pointer;
 }
 .priceInfo{

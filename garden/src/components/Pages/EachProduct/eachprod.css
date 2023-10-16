@@ -1,0 +1,187 @@
+.eachProdContainer{
+    border: 1px solid transparent;
+    margin-top: 10.5vw;
+}
+.mobeachProdContainer{
+    border: 1px solid transparent;
+    margin-top: 10.5vw;
+}
+.EachProdTitle{
+    padding: 5vw 0 1vw 2vw;
+    max-width: 90vw;
+    font-size: 4vw;
+}
+.mobEachProdTitle{
+    padding: 5vw 7vw 1vw 2vw;
+    font-size: 4vw;
+}
+.eachBelow{
+    display: flex;
+}
+.mobeachBelow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.EachElemImagef{
+   padding: 30vw 25vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+.mobEachElemImagef{
+    padding: 35vw 35vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+ 
+ }
+.EachElemInfoff{
+    padding-left: 7.2vw;
+}
+.mobEachElemInfoff{
+    padding-left: 0.2vw;
+}
+.EachPriceInff{
+    display: flex;
+    align-items: flex-end;
+    gap: 5.8vw;
+    padding-top: 7.2vw;
+}
+.mobEachPriceInff{
+    display: flex;
+    align-items: flex-end;
+    gap: 10.8vw;
+    padding-top: 3.2vw;
+}
+.discontEachPr{
+    font-size: 4.4vw;
+    font-weight: 900;
+    line-height: 1vw;
+}
+.mobdiscontEachPr{
+    font-size: 8.4vw;
+    font-weight: 900;
+    line-height: 4vw;
+}
+.discontEachPr span{
+    margin-left: 0.5vw;
+    font-size: 1vw;
+    font-weight: 900;
+}
+.mobdiscontEachPr span{
+    margin-left: 0.5vw;
+    font-size: 4vw;
+    font-weight: 900;
+}
+.priceEachPr{
+    font-size: 1.3vw;
+    font-weight: 900;
+    color: grey;
+}
+.mobpriceEachPr{
+    font-size: 4.3vw;
+    font-weight: 900;
+    color: grey;
+}
+.PercentEachPr{
+    color: red;
+    font-size: 1.4vw;
+    font-weight: 900;
+    
+}
+.mobPercentEachPr{
+    color: red;
+    font-size: 4.4vw;
+    font-weight: 900;
+    
+}
+.TocartButton{
+    width: 21vw;
+    height: 5.4vw;
+    background-color: transparent;
+    margin-top: 3.5vw;
+    border-radius: 10px;
+    color: white;
+    background-color: green;
+    font-size: 2vw;
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+    margin-right: 11vw;
+    position: relative;
+
+}
+.mobTocartButton{
+    width: 45vw;
+    height: 10.4vw;
+    background-color: transparent;
+    margin-top: 3.5vw;
+    border-radius: 10px;
+    color: white;
+    background-color: green;
+    font-size: 5vw;
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+    margin-right: 11vw;
+    position: relative;
+
+}
+.everyDescriptionf{
+    max-width: 27vw;
+    margin-top: 2.5vw;
+    border-top: dashed 3px rgb(213, 212, 212);
+}
+.mobeveryDescriptionf{
+    max-width: 53vw;
+    margin-top: 2.5vw;
+    border-top: dashed 3px rgb(213, 212, 212);
+}
+.EvDescriptTitle{
+    padding: 1.5vw 7vw 0.8vw 0;
+    font-size: 1.4vw;
+    font-weight: 900;
+}
+.mobEvDescriptTitle{
+    padding: 1.5vw 7vw 0.8vw 0;
+    font-size: 3.4vw;
+    font-weight: 900;
+}
+.AllDescriptionf{
+    font-size: 1.34vw;
+    font-weight: 900;
+}
+.mobAllDescriptionf{
+    font-size: 2.34vw;
+    font-weight: 900;
+}
+
+.five{
+    background-color: #FF32A1;
+    position: absolute;
+    top: -1vw;
+    right: -1vw;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mobfive{
+    background-color: #FF32A1;
+    position: absolute;
+    top: -1vw;
+    right: -1vw;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.six{
+    visibility: hidden;
+    position: absolute;
+}
+

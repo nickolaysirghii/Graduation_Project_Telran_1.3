@@ -52,13 +52,12 @@ useEffect(()=>{dispatcher(fetchProducts());dispatcher(fetchCategoryes());},[]);
                 ( targetClasses === "NewButton" ||
                   targetClasses === "toCart"    ||
                   targetClasses === "AddButton" ||
-                  targetClasses === "mobAddButton" ||
-                  targetClasses === "mobshowNewButton" ||
+                  targetClasses === "TocartButton" ||
                   targetClasses === "showNewButton" ) && apear && 
-                  <div style={{top:`${targetClasses    === "toCart" ? (top -5) : top}px`,
-                               left:`${targetClasses   === "toCart" ? (left +15) : left}px`,
-                               width:`${targetClasses  === "toCart" ? "680" : 300}px`,
-                               height:`${targetClasses === "toCart" ? "680" :300}px`,
+                  <div style={{top:`${targetClasses    === ("TocartButton" || "mobTocartButton" ) ? (top -5) : top}px`,
+                               left:`${targetClasses   === ("TocartButton" || "mobTocartButton" ) ? (left +15) : left}px`,
+                               width:`${targetClasses  === ("TocartButton" || "mobTocartButton" ) ? 50 : 20}vw`,
+                               height:`${targetClasses === ("TocartButton" || "mobTocartButton" ) ? 50 : 20}vw`,
                                backgroundImage: `url(http://localhost:3333${productImage})`,
                                backgroundSize: "contain",                              backgroundRepeat: "no-repeat"}}
                       className='animationElem'></div>

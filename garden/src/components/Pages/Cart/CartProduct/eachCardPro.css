@@ -1,0 +1,245 @@
+.EachProductCart{
+    height: 15.7vw;
+    border-top: 2px solid rgb(181, 178, 178);
+    display: flex;
+    align-items: center;
+}
+.mobEachProductCart{
+    height: 55.7vw;
+    border-top: 2px solid rgb(181, 178, 178);
+    display: flex;
+    align-items: center;
+    margin: 0 3vw;
+    width: 90vw;
+}
+.cartProdImagh{
+    padding: 5vw 6vw;
+    background-size: cover;
+}
+.mobcartProdImagh{
+    padding: 24vw 24vw;
+    background-size: cover;
+}
+.cartProdImfog{
+    padding: 2.8vw 0;
+    margin-left: 1.5vw;
+    position: relative;
+
+}
+.mobcartProdImfog{
+    padding: 2.8vw 0;
+    margin-left: 1.5vw;
+    position: relative;
+
+}
+.cartProdTitler{
+    font-size: 1.2vw;
+    font-weight: 900;
+    max-width: 19vw;
+}
+.mobcartProdTitler{
+    font-size: 2.5vw;
+    font-weight: 900;
+    padding-top: 10vw;
+    max-width: 35vw;
+}
+.DeleteProduct{
+    padding: 0.7vw;
+    margin-left: 17.5vw;
+    background-image: url(../../../../../public/images/kross.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.mobDeleteProduct{
+    padding: 2.7vw;
+    margin-left: 1vw;
+    background-image: url(../../../../../public/images/kross.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.DeleteWrapper{
+    display: flex;
+}
+.mobDeleteWrapper{
+    display: flex;
+    margin-bottom: 5vw;
+}
+.PriceProductCart{
+    font-size: 2.7vw;
+    font-weight: 900;
+    padding-left: 21.6vw;
+    
+}
+.mobPriceProductCart{
+    font-size: 7.7vw;
+    font-weight: 900;
+}
+.PriceProductCart span{
+    font-size: 1.5vw;
+}
+.mobPriceProductCart span{
+    font-size: 4.5vw;
+}
+.PriceWrapper{
+    display: flex;
+    align-items: center;
+    max-width: 36vw;
+}
+.mobPriceWrapper{
+    display: flex;
+    flex-direction: column;
+    
+}
+.priceDiscont{
+    margin-left: 4vw;
+    font-size: 1.4vw;
+    text-decoration: line-through;
+    color: grey;
+    font-weight: 900;
+}
+.mobpriceDiscont{
+    margin-left: 4vw;
+    font-size: 4.4vw;
+    text-decoration: line-through;
+    color: grey;
+    font-weight: 900;
+}
+.IncreaseAmount{
+  margin-top: 1vw;
+  max-width: 9vw;
+  height: 2.5vw;
+  border-radius: 10px;
+  border: 2px solid rgb(154, 148, 148);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5vw;
+  cursor: pointer;
+ 
+}
+.mobIncreaseAmount{
+    margin-top: 10vw;
+    max-width: 34vw;
+    height: 8.5vw;
+    border-radius: 10px;
+    border: 2px solid rgb(154, 148, 148);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8.5vw;
+    cursor: pointer;
+    
+  }
+.minus{
+    padding-bottom: 0.4vw;
+    font-size: 3vw;
+}
+.mobminus{
+    padding-bottom: 2vw;
+    font-size: 13vw;
+}
+.priceState{
+    width: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3vw;
+    font-weight: 900;
+}
+.mobpriceState{
+    width: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4.3vw;
+    font-weight: 900;
+}
+
+.animationCartIncrease{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    font-size: 16px;
+    background-size: contain;
+    top: 160px;
+    left: 283px;
+    color: white;
+    animation: cartAnimation 0.6s forwards;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+.mobanimationCartIncrease{
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.animationCartDecreese{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    font-size: 16px;
+    background-size: contain;
+    top: 160px;
+    left: 283px;
+    color: white;
+    animation: cartAnimationDecrease 0.6s forwards;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+.mobanimationCartDecreese{
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+@keyframes cartAnimation{
+    0%{
+        width: 2vw;
+        height: 2vw;
+        position: absolute;
+        background-size: contain;
+        top: 11vw;
+        left: 3.5vw;
+    }
+   100%{
+    width: 4vw;
+    height: 4vw;
+    position: absolute;
+    background-size: contain;
+    top: 2vw;
+    left: 8.5vw;
+    opacity: 0;
+    font-size: 6vw;
+    font-weight: 900;
+
+   }
+}
+@keyframes cartAnimationDecrease{
+    0%{
+        width: 2vw;
+        height: 2vw;
+        position: absolute;
+        background-size: contain;
+        top: 11vw;
+        left: 3.5vw;
+    }
+
+   100%{
+    width: 4vw;
+    height: 4vw;
+    position: absolute;
+    background-size: contain;
+    top: 20vw;
+    left: -2vw;
+    opacity: 0;
+    font-size: 6vw;
+
+   }
+}

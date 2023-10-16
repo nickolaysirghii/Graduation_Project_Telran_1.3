@@ -1,5 +1,5 @@
 import React,{ useEffect } from 'react';
-import "./eachProduct.css";
+import "./eachprod.css";
 import {  useSelector , useDispatch } from "react-redux";
 import { adToCart } from "../../../reduxStore/Slices/fetchProductsAll";
 import { fetchProudct } from "../../../reduxStore/Slices/fetchEachProduct"
@@ -27,26 +27,29 @@ const EachProduct = () => {
 
  const adFunction = () =>{dispatcher(changeAnimation(true))
   setTimeout(() => {dispatcher(adToCart(id))},400);};
-  
- return (
-    <div className='eachProduct'>
-        <div className='eachPrTitle'>{title}</div>
-        <div className='productPicture' style={{
-          backgroundImage: `url(http://localhost:3333${image})`}}></div>
-        <h2 className='priceProduct'>{discont_price ? discont_price : price}
-               <span className='dolars'>$</span>
-        </h2>
-        <p className='lastPrice'>{discont_price ? `${price}$`: ""}</p>
-        <p className='percentDiscount'>{ discont_price  ? `-${-percent.toFixed(2)}` : ""}
-              <span className='percent'>{discont_price ? "%" : ""}</span>
-        </p>
-        <button id={image} className='toCart' onClick={adFunction}>To Cart
-        <div className={amount !== 0 ? "five" : "six"}>{amount}</div>
-        </button>
-        <div className='description'>
-            <p className='sedDescrip'>Description</p>
-            <p className='descriptionText'>{description}</p>
-        </div>
+
+  const { mob } = useSelector((state)=>state.allProducts);
+
+  return (
+    <div className={`${mob}eachProdContainer`}>
+    <h2 className={`${mob}EachProdTitle`}>{title}</h2>
+    <div className={`${mob}eachBelow`}>
+          <div className={`${mob}EachElemImagef`} style={{backgroundImage:`url(http://localhost:3333/${image})`}}></div>
+          <div className={`${mob}EachElemInfoff`}>
+            <div className={`${mob}EachPriceInff`}>
+              <p className={`${mob}discontEachPr`}>{discont_price ? discont_price : price}<span>$</span></p>
+              <p className={`${mob}priceEachPr`}>{discont_price ? `${price}$`: ""}</p>
+              <p className={`${mob}PercentEachPr`}>{ discont_price  ? `-${-percent.toFixed(2)}` : ""}</p>
+            </div>
+            <button onClick={adFunction} id={image} className={`${mob}TocartButton`}>to cart
+            <div className={amount !== 0 ? `${mob}five` : "six"}>{amount}</div>
+            </button>
+            <div className={`${mob}everyDescriptionf`}>
+              <p className={`${mob}EvDescriptTitle`}>Descripton</p>
+              <p className={`${mob}AllDescriptionf`}>{description}</p>
+            </div>
+          </div>
+    </div>
     </div>
   )
 }

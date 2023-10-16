@@ -1,5 +1,5 @@
 import React from 'react';
-import "./cartProduct.css";
+import "./eachCardPro.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch , useSelector } from "react-redux";
@@ -8,6 +8,8 @@ import { cartAnimation } from '../../../../reduxStore/Slices/animation';
 import { Link } from 'react-router-dom';
 
 const CartProduct = ({element , amount }) => {
+
+  const {mob} = useSelector((state)=>state.allProducts);
  const { discont_price,price} = element;
  const { cartDependAnimation , cartId , cartDirection } = useSelector((state)=>state.animation)
  const dispatcher = useDispatch();
@@ -34,30 +36,30 @@ if(cartDependAnimation === 1){
   };
 
   setTimeout(() => {dispatcher(cartAnimation(cartData))}, 250);};
-  
+
   return (
-    <div className='cartProduct'>
-        <Link to={`/products/${element.id}`}  className='cartImageProduct'style={{backgroundImage:`url(http://localhost:3333/${element.image})`}}></Link>
-        <div className='desProCart'>{element.title}</div>
-        <div className='amount'>
-            <p className='decrees' onClick={decreaseProduct}>-</p>
-            <p className='amountNumber'>{amount}</p>
-            <p className='increase' onClick={increaseProduct}>+</p>
+    <div className={`${mob}EachProductCart`}>
+      <Link to={`/products/${element.id}`} className={`${mob}cartProdImagh`} style={{backgroundImage:`url(http://localhost:3333/${element.image})`}}></Link>
+      <div className={`${mob}cartProdImfog`}>
+        <div className={`${mob}DeleteWrapper`}>
+           <p className={`${mob}cartProdTitler`}>{element.title}</p>
+           <div onClick={deleteProduct} className={`${mob}DeleteProduct`}></div>
         </div>
-        <p className='cartProdPrice'>{discont_price ? (discont_price*amount).toFixed(2) : (price*amount).toFixed(2)}
-        <span className='dollar33'>$</span>
-        </p>
+        <div className={`${mob}PriceWrapper`}>
+           <p className={`${mob}PriceProductCart`}>{discont_price ? (discont_price*amount).toFixed(2) : (price*amount).toFixed(2)}<span>$</span></p>
+           <p className={`${mob}priceDiscont`}>{`${(price*amount).toFixed(2)}`}<span>$</span></p>
+        </div>
+        <div className={`${mob}IncreaseAmount`}>
+          <p onClick={decreaseProduct} className={`${mob}minus`}>-</p><p className={`${mob}priceState`}>{amount}</p><div onClick={increaseProduct}>+</div> 
+          
+        </div>
         {
-         discont_price && <p className='oldPriceCart'>{`${(price*amount).toFixed(2)}$`}</p>
-        }
+         ( cartDependAnimation === 1 && 
+           cartId === element.id)
+          && <div className= {cartDirection === "up" ? `${mob}animationCartIncrease` : `${mob}animationCartDecreese`}>{amount}</div>  
+         }
         
-        <FontAwesomeIcon className='deleteProdCart' icon={faXmark}  />
-        {
-        ( cartDependAnimation === 1 && 
-          cartId === element.id)
-         && <div className= {cartDirection === "up" ? "animationCartIncrease" : "animationCartDecreese" }>{amount}</div>  
-        }
-        <div className='coverCross' onClick={deleteProduct}></div>
+      </div>
     </div>
   )
 }
