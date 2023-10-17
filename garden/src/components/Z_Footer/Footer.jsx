@@ -2,10 +2,16 @@ import React from 'react';
 import "./footer.css"
 import whatsUp from "../../svg/watsUp.svg";
 import instagram from "../../svg/instagram.svg"
-import { useSelector } from 'react-redux';
+import { useSelector , useDispatch } from 'react-redux';
+import { changeVersion } from '../../reduxStore/Slices/fetchProductsAll';
 
 const Footer = () => {
    const { mob } = useSelector((state)=>state.allProducts);
+   const dispatcher = useDispatch();
+   const changeVersion22 = ()=>{
+      const data = mob === "mob" ? "" : "mob";
+      dispatcher(changeVersion(data))
+   }
   return (
     <div className={`${mob}footerContainer`}>
      <h2>Contact<span>Address</span></h2>
@@ -26,6 +32,7 @@ const Footer = () => {
         </div>
      </div>
      <div className={`${mob}footerMap`}></div>
+     <div onClick={changeVersion22} className={`${mob}Version`}>{mob ? "Full version" : "Mobile version"}</div>
     </div>
   )
 }

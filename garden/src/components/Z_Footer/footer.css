@@ -113,3 +113,13 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+.Version{
+    color: red;
+    font-weight: 900;
+    cursor: pointer;
+}
+.mobVersion{
+    color: red;
+    font-weight: 900;
+    cursor: pointer;
+}

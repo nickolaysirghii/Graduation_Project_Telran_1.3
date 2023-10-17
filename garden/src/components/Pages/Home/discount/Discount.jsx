@@ -40,8 +40,12 @@ const Discount = () => {
       <p className={`${mob}belowOff`}>on the first order</p>
       <input type='text'defaultValue='+49' name='discont'/><br/>
       <button>
+
                {
-                sendDiscountStatus ? "Thank you , the request was sended !" : "Get a discount"
+                <div className={`${mob}thanking`}>{sendDiscountStatus ? "Thank you , the request was sended !" : "Get a discount"}</div>
+
+
+
                }
                {
                   didntIntrouce && <div className='warning'>

@@ -1,6 +1,7 @@
 .catalogContainer{
     padding-top: 2.4vw;
     background-size: contain;
+    max-width: 90vw;
 }
 .mobcatalogContainer{
     padding-top: 2.4vw;
@@ -42,7 +43,6 @@
 }
 .catalogElementsContainer{
     width: 100%;
-    height: 32vw;
     padding: 1vw 2vw;
     display: flex;
     gap: 2vw;
@@ -52,4 +52,5 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 2vw;
+
 }

@@ -1,7 +1,7 @@
 import { createSlice , createAsyncThunk } from "@reduxjs/toolkit";
 
 const initialState = {
-    mob: "mob",
+    mob: "",
     productsData: [],
     CheckSale: false,
     SortData: "default",
@@ -93,6 +93,9 @@ export const productsSlice = createSlice({
         },
         clearCircleAmount: ( state ) =>{
             state.circleAmount = 0;
+        },
+        changeVersion: (state , action)=>{
+           state.mob = action.payload
         }
     },
     extraReducers:{
@@ -114,5 +117,6 @@ export const productsSlice = createSlice({
                     priceTo,sortedBy,adToCart,
                     deleteFromCart,increaseAmount,
                     discountRequest,clearCircleAmount,
-                    decreaseAmount,returnBack } = productsSlice.actions;
+                    decreaseAmount,returnBack,
+                    changeVersion } = productsSlice.actions;
      export default productsSlice.reducer;
