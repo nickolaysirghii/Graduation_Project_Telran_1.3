@@ -63,12 +63,12 @@ useEffect(()=>{dispatcher(fetchProducts());dispatcher(fetchCategoryes());},[]);
                       className='animationElem'></div>
             }
             {
-                sendStatus && <div className='fallingCircleContainer'>
-                           <div className='fallingCircle'>{circleAmount}</div>
+                sendStatus && <div className= {`${mob}fallingCircleContainer`}>
+                           <div className= {`${mob}fallingCircle`}>{circleAmount}</div>
                       </div>
            }
            {
-           sendStatus && <div className='theBee'>
+            sendStatus && <div className={`${mob}theBee`}>
              <div className='bzzCover'></div>
              <div className='The_bee'>
             <div className='DownPart'></div>
