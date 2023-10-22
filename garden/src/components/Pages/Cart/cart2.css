@@ -2,7 +2,7 @@
     color: black;
 }
 .ShoppingCart{
-    padding: 2.4vw 68vw 1vw 2vw;
+    padding: 10.4vw 68vw 1vw 2vw;
     font-size: 2.7vw;
 }
 .mobShoppingCart{
@@ -30,7 +30,7 @@
     align-items: center;
 
 }
-.backToStore > div{
+.backToStore > a{
     width: 1.5vw;
     height: 1.5vw;
     margin-left: 1vw;

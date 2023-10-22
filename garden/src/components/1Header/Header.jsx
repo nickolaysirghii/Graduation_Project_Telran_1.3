@@ -49,15 +49,15 @@ useEffect(()=>{dispatcher(fetchProducts());dispatcher(fetchCategoryes());},[]);
                    apear && <div className={`${mob}swallow`}><div>{cartAmount}</div></div>
                   }
                   {
-                ( targetClasses === "NewButton" ||
-                  targetClasses === "toCart"    ||
-                  targetClasses === "AddButton" ||
-                  targetClasses === "TocartButton" ||
-                  targetClasses === "showNewButton" ) && apear && 
-                  <div style={{top:`${targetClasses    === ("TocartButton" || "mobTocartButton" ) ? (top -5) : top}px`,
-                               left:`${targetClasses   === ("TocartButton" || "mobTocartButton" ) ? (left +15) : left}px`,
-                               width:`${targetClasses  === ("TocartButton" || "mobTocartButton" ) ? 50 : 20}vw`,
-                               height:`${targetClasses === ("TocartButton" || "mobTocartButton" ) ? 50 : 20}vw`,
+                ( targetClasses === `${mob}NewButton` ||
+                  targetClasses === `${mob}toCart`    ||
+                  targetClasses === `${mob}AddButton` ||
+                  targetClasses === `${mob}TocartButton` ||
+                  targetClasses ===  `${mob}showNewButton` ) && apear && 
+                  <div style={{top: mob === "" ? "10vh" : "40vh" ,
+                               left: mob === "" ? "10vw" : "20vw" ,
+                               width:mob === "" ? "50vw" : "50vw",
+                               height:mob === "" ? "50vw" : "50vw",
                                backgroundImage: `url(http://localhost:3333${productImage})`,
                                backgroundSize: "contain",                              backgroundRepeat: "no-repeat"}}
                       className='animationElem'></div>

@@ -17,7 +17,7 @@ function App() {
   
     const getEvent = (e)=>{
      const position = {
-           top: e.screenY - e.nativeEvent.layerY - 310,
+           top: e.screenY -200 ,
            get_class: e.target.className,
            image: e.target.id,
            left: e.target.offsetParent.offsetLeft       
