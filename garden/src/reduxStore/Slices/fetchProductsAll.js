@@ -1,7 +1,7 @@
 import { createSlice , createAsyncThunk } from "@reduxjs/toolkit";
 
 const initialState = {
-    mob: "",
+    mob: window.innerWidth < 800 ? "mob" : "",
     productsData: [],
     CheckSale: false,
     SortData: "default",
