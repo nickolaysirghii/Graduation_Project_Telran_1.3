@@ -1,5 +1,6 @@
+## Student : Sirghii Nicolai.
 
-
+This site adapts to screen width and can also be switched to mobile version. The switch to the mobile version is at the very bottom of the screen.
 
 ## I installed:
 npm i react-router-dom
@@ -13,5 +14,7 @@ npm install axios
 
 ## Google Fonts "Montserrat"
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,900&family=Nunito:wght@800&display=swap');
+
+
 
 
